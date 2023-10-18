@@ -21,12 +21,12 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="transition-all duration-200 ease-linear">
             <div className="flex h-[100dvh] bg-slate-100 dark:bg-zinc-900">
-              <div className="shadow-sidebar hidden w-72 flex-col rounded-r-[30px] bg-white pb-3 dark:bg-zinc-800 dark:shadow-zinc-950 lg:flex">
+              <div className="shadow-sidebar hidden w-72 min-w-max shrink-0 flex-col rounded-r-[30px] bg-white pb-3 dark:bg-zinc-800 dark:shadow-zinc-950 lg:flex">
                 <Sidebar />
               </div>
-              <div className="relative grow">
+              <div className="scrollbar-track-zinc-200 dark:scrollbar-track-zinc-700 scrollbar-thumb-zinc-400 dark:scrollbar-thumb-zinc-800 scrollbar-track-rounded-full scrollbar-thumb-rounded-full xl:scrollbar-thin relative grow overflow-y-auto">
                 <Topbar />
-                <section className="mt-14 p-3 sm:p-7">{children}</section>
+                <section className="p-3 sm:p-7">{children}</section>
               </div>
             </div>
           </main>

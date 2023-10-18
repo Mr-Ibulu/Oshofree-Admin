@@ -22,7 +22,7 @@ const ThemeToggle = ({ className }) => {
 
   return (
     <button className={className} onClick={() => changeTheme()}>
-      {mode === "dark" ? <MdOutlineDarkMode /> : <MdOutlineWbSunny />}
+      {mode === "dark" ? <MdOutlineWbSunny /> : <MdOutlineDarkMode />}
     </button>
   );
 };

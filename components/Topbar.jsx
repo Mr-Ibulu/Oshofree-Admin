@@ -9,7 +9,7 @@ import Sidebar from "./Sidebar";
 
 const Topbar = () => {
   return (
-    <div className="absolute flex h-14 w-full items-center px-6">
+    <div className="sticky top-0 z-50 flex h-16 w-full items-center bg-transparent px-6 backdrop-blur">
       <Sheet>
         <SheetTrigger asChild>
           <button className="rounded-full bg-white p-2 text-2xl shadow-md transition-transform duration-200 ease-in-out hover:scale-110 focus:outline-none active:scale-95 dark:bg-zinc-800 dark:shadow-zinc-950 sm:text-3xl lg:hidden">
