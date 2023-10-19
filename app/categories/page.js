@@ -32,7 +32,7 @@ const Categories = () => {
           </Link>
         </Button>
       </div>
-      <DataTable columns={categoryColumns} rows={categories} searchKeyword={searchKeyword} />
+      <DataTable columns={categoryColumns} rows={categories} searchKeyword={searchKeyword} defaultSearchColumnField={"title"} />
     </>
   );
 };

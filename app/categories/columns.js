@@ -3,17 +3,17 @@ import RowTitle from "@/components/table/RowTitle";
 import { findParent } from "@/lib/utils";
 import { randomQuantity } from "@mui/x-data-grid-generator";
 import { Badge } from "@/components/ui/badge";
-import { MdModeEditOutline, MdOutlineModeEditOutline } from "react-icons/md";
+import { MdManageAccounts, MdModeEditOutline, MdOutlineModeEditOutline } from "react-icons/md";
 import Link from "next/link";
 
 export const categoryColumns = [
   {
     field: "actions",
-    headerName: "Edit",
+    headerName: "Manage",
     width: 100,
     renderCell: ({ row }) => (
       <Link href={`/categories/${row.slug}`} className="rounded-full p-2 hover:bg-zinc-200 dark:hover:bg-zinc-900">
-        <MdModeEditOutline className="text-xl text-zinc-600 dark:text-zinc-400" />
+        <MdManageAccounts className="text-xl text-zinc-600 dark:text-zinc-400" />
       </Link>
     ),
   },

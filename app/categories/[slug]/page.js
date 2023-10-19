@@ -47,7 +47,6 @@ const ViewCategory = ({ params }) => {
               </div>
               <Form.Control asChild>
                 <Input
-                  onChange={(e) => console.log(e.target.value)}
                   type="file"
                   accept=".png, .jpg, .jpeg"
                   className="mx-auto mt-5 w-[70%] shadow-inner dark:bg-zinc-900 dark:shadow-zinc-950 dark:file:bg-zinc-900"
