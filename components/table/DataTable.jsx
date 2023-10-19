@@ -6,7 +6,7 @@ import TableToolbar from "@/components/table/Toolbar";
 import { useTheme } from "next-themes";
 
 const DataTable = ({ columns, rows, searchKeyword }) => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const [useToolbarFilter, setUseToolbarFilter] = useState(true);
 
   useEffect(() => {
@@ -32,8 +32,8 @@ const DataTable = ({ columns, rows, searchKeyword }) => {
           borderWidth: "0px",
           fontFamily: "inherit",
           color: "inherit",
-          "& .MuiDataGrid-withBorderColor": { borderColor: theme === "dark" ? "#71717a" : "" },
-          "& .MuiDataGrid-columnSeparator": { visibility: "visible", color: theme === "dark" ? "#ef4444" : "" },
+          "& .MuiDataGrid-withBorderColor": { borderColor: resolvedTheme === "dark" ? "#71717a" : "" },
+          "& .MuiDataGrid-columnSeparator": { visibility: "visible", color: resolvedTheme === "dark" ? "#ef4444" : "" },
           "& .MuiButtonBase-root": { color: "inherit" },
           "& .MuiTablePagination-root": { color: "inherit" },
           "& .MuiDataGrid-toolbarContainer": { gap: "20px" },

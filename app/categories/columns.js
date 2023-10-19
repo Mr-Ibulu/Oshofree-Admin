@@ -2,8 +2,21 @@ import TableImage from "@/components/table/TableImage";
 import RowTitle from "@/components/table/RowTitle";
 import { findParent } from "@/lib/utils";
 import { randomQuantity } from "@mui/x-data-grid-generator";
+import { Badge } from "@/components/ui/badge";
+import { MdModeEditOutline, MdOutlineModeEditOutline } from "react-icons/md";
+import Link from "next/link";
 
 export const categoryColumns = [
+  {
+    field: "actions",
+    headerName: "Edit",
+    width: 100,
+    renderCell: ({ row }) => (
+      <Link href={`/categories/${row.slug}`} className="rounded-full p-2 hover:bg-zinc-200 dark:hover:bg-zinc-900">
+        <MdModeEditOutline className="text-xl text-zinc-600 dark:text-zinc-400" />
+      </Link>
+    ),
+  },
   {
     field: "image",
     sortable: false,
@@ -52,5 +65,17 @@ export const categoryColumns = [
     headerName: "Parent Category",
     minWidth: 250,
     valueGetter: ({ row }) => row.parent && findParent(row).title,
+  },
+  {
+    field: "isEnabled",
+    type: "boolean",
+    headerName: "Enabled",
+    minWidth: 100,
+    renderCell: ({ row }) =>
+      row.isEnabled ? (
+        <Badge className="bg-green-600 dark:bg-green-600 dark:text-white">Enabled</Badge>
+      ) : (
+        <Badge variant="destructive">Disabled</Badge>
+      ),
   },
 ];
