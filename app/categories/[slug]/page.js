@@ -23,7 +23,7 @@ const ViewCategory = ({ params }) => {
         <button className="text-5xl" onClick={() => router.replace("/categories")}>
           <MdOutlineChevronLeft />
         </button>
-        <h1 className="text-2xl font-bold sm:text-3xl">{categoryDetails.title}</h1>
+        <h1 className="line-clamp-3 text-2xl font-bold sm:text-3xl">{categoryDetails.title}</h1>
         <Button variant="ghost" size="icon" className="ml-auto mr-5">
           <MdDelete className="text-3xl text-red-600" />
         </Button>

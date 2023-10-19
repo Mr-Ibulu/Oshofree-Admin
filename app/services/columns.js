@@ -6,13 +6,13 @@ import { Badge } from "@/components/ui/badge";
 import { MdManageAccounts, MdModeEditOutline, MdOutlineModeEditOutline } from "react-icons/md";
 import Link from "next/link";
 
-export const productColumns = [
+export const serviceColumns = [
   {
     field: "actions",
     headerName: "Manage",
     width: 100,
     renderCell: ({ row }) => (
-      <Link href={`/products/${row.id}`} className="rounded-full p-2 hover:bg-zinc-200 dark:hover:bg-zinc-900">
+      <Link href={`/services/${row.id}`} className="rounded-full p-2 hover:bg-zinc-200 dark:hover:bg-zinc-900">
         <MdManageAccounts className="text-xl text-zinc-600 dark:text-zinc-400" />
       </Link>
     ),

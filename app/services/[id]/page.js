@@ -13,15 +13,15 @@ import NoImage from "@/components/NoImage";
 import { Switch } from "@/components/ui/switch";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
-import { cn, findAllDescendantCategory, findAllRootCategories, findProduct } from "@/lib/utils";
+import { cn, findAllDescendantCategory, findAllRootCategories, findService } from "@/lib/utils";
 import { format } from "date-fns";
 import { randomRate } from "@mui/x-data-grid-generator";
 
-const ViewDeal = ({ params }) => {
-  const [date, setDate] = useState(findProduct(params.id).expiry);
-  const [selectedCategories, setSelectedCategories] = useState(findProduct(params.id).categories);
+const ViewServiceDeal = ({ params }) => {
+  const [date, setDate] = useState(findService(params.id).expiry);
+  const [selectedCategories, setSelectedCategories] = useState(findService(params.id).categories);
   const router = useRouter();
-  const dealDetails = findProduct(params.id);
+  const dealDetails = findService(params.id);
   const addCategory = (name) => {
     if (selectedCategories.includes(name)) {
       return;
@@ -37,7 +37,7 @@ const ViewDeal = ({ params }) => {
   return (
     <div className="mx-auto max-w-5xl">
       <div className="mb-8 flex items-center gap-4">
-        <button className="text-5xl" onClick={() => router.replace("/products")}>
+        <button className="text-5xl" onClick={() => router.replace("/services")}>
           <MdOutlineChevronLeft />
         </button>
         <h1 className="line-clamp-3 text-2xl font-bold sm:text-3xl">{dealDetails.title}</h1>
@@ -215,7 +215,7 @@ const ViewDeal = ({ params }) => {
                 </Popover>
               </div>
               <p className="mt-1 px-3 text-xs font-medium dark:text-zinc-400">
-                You can assign multiple categories to this product. Click on selected item to remove it from the list.
+                You can assign multiple categories to this service. Click on selected item to remove it from the list.
               </p>
             </div>
             <Form.Field className="mb-2" name="description">
@@ -241,4 +241,4 @@ const ViewDeal = ({ params }) => {
   );
 };
 
-export default ViewDeal;
+export default ViewServiceDeal;

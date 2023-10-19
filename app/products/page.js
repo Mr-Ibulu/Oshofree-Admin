@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { MdAdd, MdOutlineSearch } from "react-icons/md";
-import { productColums } from "./columns";
-import { categories } from "@/data/categories";
+import { productColumns } from "./columns";
 import DataTable from "@/components/table/DataTable";
 import Link from "next/link";
 import { products } from "@/data/products";
@@ -33,7 +32,7 @@ const Products = () => {
           </Link>
         </Button>
       </div>
-      <DataTable columns={productColums} rows={products} searchKeyword={searchKeyword} defaultSearchColumnField={"id"} />
+      <DataTable columns={productColumns} rows={products} searchKeyword={searchKeyword} defaultSearchColumnField={"id"} />
     </>
   );
 };
