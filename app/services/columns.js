@@ -33,7 +33,7 @@ export const serviceColumns = [
     field: "title",
     headerName: "Name",
     minWidth: 250,
-    renderCell: ({ row }) => <RowTitle row={row} />,
+    renderCell: ({ row }) => <RowTitle title={row.title} />,
   },
   {
     field: "prevPrice",

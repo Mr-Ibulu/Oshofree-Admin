@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation";
 import { MdDelete, MdOutlineChevronLeft, MdOutlineError } from "react-icons/md";
 import * as Form from "@radix-ui/react-form";
 import { Input } from "@/components/ui/input";
@@ -10,19 +9,19 @@ import { findAllDescendantCategory, findAllRootCategories, findCategory, findPar
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import NoImage from "@/components/NoImage";
+import NoImagePlaceholder from "@/components/NoImagePlaceholder";
 import { Switch } from "@/components/ui/switch";
+import Link from "next/link";
 
 const ViewCategory = ({ params }) => {
-  const router = useRouter();
   const categoryDetails = findCategory(params.slug);
   const parent = findParent(categoryDetails);
   return (
     <div className="mx-auto max-w-5xl">
       <div className="mb-8 flex items-center gap-4">
-        <button className="text-5xl" onClick={() => router.replace("/categories")}>
+        <Link href={"/categories"} className="text-5xl">
           <MdOutlineChevronLeft />
-        </button>
+        </Link>
         <h1 className="line-clamp-3 text-2xl font-bold sm:text-3xl">{categoryDetails.title}</h1>
         <Button variant="ghost" size="icon" className="ml-auto mr-5">
           <MdDelete className="text-3xl text-red-600" />
@@ -42,14 +41,14 @@ const ViewCategory = ({ params }) => {
                     className="object-cover"
                   />
                 ) : (
-                  <NoImage altText={`${categoryDetails.slug}/no-image`} size={50} className={"rounded-xl border dark:border-zinc-950"} />
+                  <NoImagePlaceholder altText={`${categoryDetails.slug}/no-image`} size={50} className={"rounded-xl border dark:border-zinc-950"} />
                 )}
               </div>
               <Form.Control asChild>
                 <Input
                   type="file"
                   accept=".png, .jpg, .jpeg"
-                  className="mx-auto mt-5 w-[70%] shadow-inner dark:bg-zinc-900 dark:shadow-zinc-950 dark:file:bg-zinc-900"
+                  className="mx-auto mt-5 w-[70%] shadow-inner file:mr-2 file:rounded file:bg-white dark:bg-zinc-900 dark:shadow-zinc-950 dark:file:bg-zinc-700"
                 />
               </Form.Control>
             </Form.Field>
@@ -75,7 +74,7 @@ const ViewCategory = ({ params }) => {
                   required
                   value={categoryDetails.title}
                   type="text"
-                  className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner focus-visible:ring-transparent data-[invalid]:border-red-500 dark:bg-zinc-900 dark:shadow-zinc-950"
+                  className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
                 />
               </Form.Control>
               <p className="mt-1 px-3 text-xs font-medium dark:text-zinc-400">The name is how it appears on Oshofree.com</p>
@@ -92,7 +91,7 @@ const ViewCategory = ({ params }) => {
                   value={categoryDetails.slug}
                   required
                   type="text"
-                  className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner focus-visible:ring-transparent data-[invalid]:border-red-500 dark:bg-zinc-900 dark:shadow-zinc-950"
+                  className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
                 />
               </Form.Control>
               <p className="mt-1 px-3 text-xs font-medium dark:text-zinc-400">

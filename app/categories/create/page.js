@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation";
 import { MdOutlineChevronLeft, MdOutlineError } from "react-icons/md";
 import * as Form from "@radix-ui/react-form";
 import { Input } from "@/components/ui/input";
@@ -9,15 +8,15 @@ import { Select, SelectContent, SelectItem, SelectSeparator, SelectTrigger, Sele
 import { findAllDescendantCategory, findAllRootCategories } from "@/lib/utils";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const CreateCategory = () => {
-  const router = useRouter();
   return (
     <div className="mx-auto max-w-5xl">
       <div className="mb-8 flex items-center gap-4">
-        <button className="text-5xl" onClick={() => router.replace("/categories")}>
+        <Link href={"/categories"} replace className="text-5xl">
           <MdOutlineChevronLeft />
-        </button>
+        </Link>
         <h1 className="text-2xl font-bold sm:text-3xl">Create Category</h1>
       </div>
       <div className="mx-auto max-w-4xl rounded-xl bg-white px-5 py-5 shadow-md dark:bg-zinc-800">
@@ -33,7 +32,7 @@ const CreateCategory = () => {
               <Input
                 required
                 type="text"
-                className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner focus-visible:ring-transparent data-[invalid]:border-red-500 dark:bg-zinc-900 dark:shadow-zinc-950"
+                className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
               />
             </Form.Control>
             <p className="mt-1 px-3 text-xs font-medium dark:text-zinc-400">The name is how it appears on Oshofree.com</p>
@@ -49,7 +48,7 @@ const CreateCategory = () => {
               <Input
                 required
                 type="text"
-                className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner focus-visible:ring-transparent data-[invalid]:border-red-500 dark:bg-zinc-900 dark:shadow-zinc-950"
+                className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
               />
             </Form.Control>
             <p className="mt-1 px-3 text-xs font-medium dark:text-zinc-400">
@@ -98,7 +97,11 @@ const CreateCategory = () => {
               <Form.Label className=" font-medium leading-8">Image</Form.Label>
             </div>
             <Form.Control asChild>
-              <Input type="file" className="shadow-inner dark:bg-zinc-900 dark:shadow-zinc-950 dark:file:bg-zinc-900" />
+              <Input
+                type="file"
+                accept=".png, .jpg, .jpeg"
+                className="shadow-inner file:mr-2 file:rounded file:bg-white  dark:bg-zinc-900 dark:shadow-zinc-950 dark:file:bg-zinc-700"
+              />
             </Form.Control>
           </Form.Field>
           <div className="flex items-center justify-center">

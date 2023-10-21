@@ -5,7 +5,7 @@ import noImageBlack from "@/public/images/no-image-black.svg";
 import noImageWhite from "@/public/images/no-image-white.svg";
 import { useTheme } from "next-themes";
 
-const NoImage = ({ altText, size, className }) => {
+const NoImagePlaceholder = ({ altText, size, className }) => {
   const { resolvedTheme } = useTheme();
 
   return (
@@ -19,4 +19,4 @@ const NoImage = ({ altText, size, className }) => {
   );
 };
 
-export default NoImage;
+export default NoImagePlaceholder;

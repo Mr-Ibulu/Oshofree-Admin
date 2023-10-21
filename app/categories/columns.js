@@ -28,7 +28,7 @@ export const categoryColumns = [
     field: "title",
     headerName: "Name",
     minWidth: 250,
-    renderCell: ({ row }) => <RowTitle row={row} />,
+    renderCell: ({ row }) => <RowTitle title={row.title} />,
   },
   {
     field: "description",

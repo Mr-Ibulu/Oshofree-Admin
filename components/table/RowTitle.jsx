@@ -1,7 +1,7 @@
 import React from "react";
 
-const RowTitle = ({ row }) => {
-  return <p className="font-semibold">{row.title}</p>;
+const RowTitle = ({ title }) => {
+  return <p className="font-semibold">{title}</p>;
 };
 
 export default RowTitle;
