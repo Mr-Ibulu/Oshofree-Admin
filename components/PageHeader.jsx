@@ -15,7 +15,7 @@ const PageHeader = ({ title, searchKeyword, setSearchKeyword, searchInputPlaceho
             onChange={(e) => setSearchKeyword(e.target.value)}
             type="text"
             placeholder={searchInputPlaceholder}
-            className="h-12 rounded-3xl border-none px-6 text-base font-medium shadow-inner focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            className="h-12 rounded-3xl border-none px-6 text-base font-medium shadow-inner placeholder:[word-spacing:4px] focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
           />
           <MdOutlineSearch className="absolute right-4 top-1/2 -translate-y-1/2 text-2xl" />
         </div>

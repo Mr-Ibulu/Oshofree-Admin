@@ -12,7 +12,7 @@ const Vendors = () => {
     <>
       <PageHeader
         title={"Vendors"}
-        searchInputPlaceholder={"Search vendor name"}
+        searchInputPlaceholder={"Search by vendor name"}
         searchKeyword={searchKeyword}
         setSearchKeyword={setSearchKeyword}
         buttonTitle={"Add New Vendor"}

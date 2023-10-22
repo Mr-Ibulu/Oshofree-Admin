@@ -13,7 +13,7 @@ const Categories = () => {
     <>
       <PageHeader
         title={"Categories"}
-        searchInputPlaceholder={"Search category name"}
+        searchInputPlaceholder={"Search by category name"}
         searchKeyword={searchKeyword}
         setSearchKeyword={setSearchKeyword}
         buttonTitle={"Add New Category"}

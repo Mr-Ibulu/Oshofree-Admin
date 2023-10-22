@@ -13,7 +13,7 @@ const Products = () => {
     <>
       <PageHeader
         title={"Product Deals"}
-        searchInputPlaceholder={"Search product ID"}
+        searchInputPlaceholder={"Search by product ID"}
         searchKeyword={searchKeyword}
         setSearchKeyword={setSearchKeyword}
         buttonTitle={"Add New Product Deal"}

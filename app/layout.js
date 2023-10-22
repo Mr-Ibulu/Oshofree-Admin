@@ -1,8 +1,8 @@
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "@/components/global/Sidebar";
 import "./globals.css";
 import ThemeProvider from "@/components/theme/ThemeProvider";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import Topbar from "@/components/Topbar";
+import Topbar from "@/components/global/Topbar";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],

@@ -12,7 +12,7 @@ const Services = () => {
     <>
       <PageHeader
         title={"Service Deals"}
-        searchInputPlaceholder={"Search service ID"}
+        searchInputPlaceholder={"Search by service ID"}
         searchKeyword={searchKeyword}
         setSearchKeyword={setSearchKeyword}
         buttonTitle={"Add New Service Deal"}

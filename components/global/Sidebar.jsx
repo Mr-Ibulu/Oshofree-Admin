@@ -18,7 +18,7 @@ import { TbPackages } from "react-icons/tb";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import { SheetClose } from "./ui/sheet";
+import { SheetClose } from "../ui/sheet";
 
 const sidebarOptions = [
   { link: "", title: "Dashboard", icon: <MdOutlineHome /> },

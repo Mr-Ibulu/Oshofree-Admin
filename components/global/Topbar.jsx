@@ -3,8 +3,8 @@ import Link from "next/link";
 import paul from "@/public/images/paul.png";
 import { MdMenu, MdOutlineChatBubbleOutline, MdOutlineNotificationsNone } from "react-icons/md";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import ThemeToggle from "./theme/ThemeToggle";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import ThemeToggle from "../theme/ThemeToggle";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import Sidebar from "./Sidebar";
 
 const Topbar = () => {
