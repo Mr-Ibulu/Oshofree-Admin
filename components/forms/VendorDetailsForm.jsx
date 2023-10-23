@@ -16,16 +16,16 @@ const VendorDetailsForm = ({ vendorDetails }) => {
     <Form.Root>
       <div className="grow space-y-7">
         <div className="flex items-center gap-3 px-3">
-          <span>Status:</span>
-          {vendorDetails.status === "Suspended" ? (
+          <span>Account Status:</span>
+          {vendorDetails.accountStatus === "Suspended" ? (
             "Suspended"
           ) : (
             <Form.Field className="flex items-center gap-4" name="active">
               <div className="flex flex-wrap items-center px-3">
-                <Form.Label className=" font-medium leading-8">{vendorDetails.status}</Form.Label>
+                <Form.Label className=" font-medium leading-8">{vendorDetails.accountStatus}</Form.Label>
               </div>
               <Form.Control asChild>
-                <Switch checked={vendorDetails.status === "Active"} />
+                <Switch checked={vendorDetails.accountStatus === "Active"} />
               </Form.Control>
             </Form.Field>
           )}

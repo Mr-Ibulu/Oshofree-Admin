@@ -14,7 +14,7 @@ import {
 } from "@mui/x-data-grid-generator";
 
 const imageArr = [joe, jane, john, paul];
-const status = ["Active", "Inactive", "Suspended"];
+const accountStatus = ["Active", "Inactive", "Suspended"];
 
 function getRandomElementFromArr(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -29,7 +29,7 @@ export const vendors = [
     email: randomEmail(),
     companyName: randomCompanyName(),
     officeAddress: randomAddress(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
@@ -45,7 +45,7 @@ export const vendors = [
     email: randomEmail(),
     companyName: randomCompanyName(),
     officeAddress: randomAddress(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
@@ -61,7 +61,7 @@ export const vendors = [
     email: randomEmail(),
     companyName: randomCompanyName(),
     officeAddress: randomAddress(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
@@ -77,7 +77,7 @@ export const vendors = [
     email: randomEmail(),
     companyName: randomCompanyName(),
     officeAddress: randomAddress(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
@@ -93,7 +93,7 @@ export const vendors = [
     email: randomEmail(),
     companyName: randomCompanyName(),
     officeAddress: randomAddress(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
@@ -109,7 +109,7 @@ export const vendors = [
     email: randomEmail(),
     companyName: randomCompanyName(),
     officeAddress: randomAddress(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
@@ -125,7 +125,7 @@ export const vendors = [
     email: randomEmail(),
     companyName: randomCompanyName(),
     officeAddress: randomAddress(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
@@ -141,7 +141,7 @@ export const vendors = [
     email: randomEmail(),
     companyName: randomCompanyName(),
     officeAddress: randomAddress(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
@@ -157,7 +157,7 @@ export const vendors = [
     email: randomEmail(),
     companyName: randomCompanyName(),
     officeAddress: randomAddress(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
@@ -173,7 +173,7 @@ export const vendors = [
     email: randomEmail(),
     companyName: randomCompanyName(),
     officeAddress: randomAddress(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),

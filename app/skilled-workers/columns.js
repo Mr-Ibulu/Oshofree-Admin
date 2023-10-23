@@ -72,9 +72,9 @@ export const skilledWorkerColumns = [
     minWidth: 130,
   },
   {
-    field: "status",
-    headerName: "Status",
-    minWidth: 100,
+    field: "accountStatus",
+    headerName: "Account Status",
+    minWidth: 150,
     renderCell: ({ value }) =>
       value === "Active" ? (
         <Badge className="bg-green-600 dark:bg-green-600 dark:text-white">{value}</Badge>

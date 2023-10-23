@@ -120,7 +120,7 @@ const CreateSkilledWorkerForm = () => {
         </Form.Submit>
       </div>
     </Form.Root>
-  )
-}
+  );
+};
 
-export default CreateSkilledWorkerForm
+export default CreateSkilledWorkerForm;

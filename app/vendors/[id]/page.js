@@ -11,7 +11,7 @@ const VendorDetails = ({ params }) => {
   const vendorDetails = findVendor(params.id);
   return (
     <div className="mx-auto max-w-5xl">
-      <DetailsHead goBackLink={"/vendors"} headerTitle={vendorDetails.companyName} />
+      <DetailsHead headerTitle={vendorDetails.companyName} />
       <div className="mx-auto flex flex-col flex-wrap gap-8 rounded-xl bg-white px-5 py-5 shadow-md dark:bg-zinc-800 sm:flex-row">
         <div className="w-full">
           <div className="flex items-center gap-3">

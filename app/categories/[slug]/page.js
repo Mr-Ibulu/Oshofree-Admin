@@ -10,7 +10,7 @@ const ViewCategory = ({ params }) => {
   const categoryDetails = findCategory(params.slug);
   return (
     <div className="mx-auto max-w-5xl">
-      <DetailsHead goBackLink={"/categories"} headerTitle={categoryDetails.title} />
+      <DetailsHead headerTitle={categoryDetails.title} />
       <div className="mx-auto flex flex-col gap-8 rounded-xl bg-white px-5 py-5 shadow-md dark:bg-zinc-800 sm:flex-row">
         <DetailsImageContainer imageSrc={categoryDetails.image} alt={categoryDetails.title} />
         <CategoryDetailsForm categoryDetails={categoryDetails} />

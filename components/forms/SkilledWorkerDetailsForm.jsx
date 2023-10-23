@@ -15,16 +15,16 @@ const SkilledWorkerDetailsForm = ({ skilledWorkerDetails }) => {
     <Form.Root>
       <div className="grow space-y-7">
         <div className="flex items-center gap-3 px-3">
-          <span>Status:</span>
-          {skilledWorkerDetails.status === "Suspended" ? (
+          <span>Account Status:</span>
+          {skilledWorkerDetails.accountStatus === "Suspended" ? (
             "Suspended"
           ) : (
             <Form.Field className="flex items-center gap-4" name="active">
               <div className="flex flex-wrap items-center px-3">
-                <Form.Label className=" font-medium leading-8">{skilledWorkerDetails.status}</Form.Label>
+                <Form.Label className=" font-medium leading-8">{skilledWorkerDetails.accountStatus}</Form.Label>
               </div>
               <Form.Control asChild>
-                <Switch checked={skilledWorkerDetails.status === "Active"} />
+                <Switch checked={skilledWorkerDetails.accountStatus === "Active"} />
               </Form.Control>
             </Form.Field>
           )}

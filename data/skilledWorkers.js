@@ -14,7 +14,7 @@ import {
 } from "@mui/x-data-grid-generator";
 
 const imageArr = [joe, jane, john, paul];
-const status = ["Active", "Inactive", "Suspended"];
+const accountStatus = ["Active", "Inactive", "Suspended"];
 
 function getRandomElementFromArr(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -31,7 +31,7 @@ export const skilledWorkers = [
     officeAddress: randomAddress(),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
     jobsCompleted: randomInt(0, 300),
@@ -47,7 +47,7 @@ export const skilledWorkers = [
     officeAddress: randomAddress(),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
     jobsCompleted: randomInt(0, 300),
@@ -63,7 +63,7 @@ export const skilledWorkers = [
     officeAddress: randomAddress(),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
     jobsCompleted: randomInt(0, 300),
@@ -79,7 +79,7 @@ export const skilledWorkers = [
     officeAddress: randomAddress(),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
     jobsCompleted: randomInt(0, 300),
@@ -95,7 +95,7 @@ export const skilledWorkers = [
     officeAddress: randomAddress(),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
     jobsCompleted: randomInt(0, 300),
@@ -111,7 +111,7 @@ export const skilledWorkers = [
     officeAddress: randomAddress(),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
     jobsCompleted: randomInt(0, 300),
@@ -127,7 +127,7 @@ export const skilledWorkers = [
     officeAddress: randomAddress(),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
     jobsCompleted: randomInt(0, 300),
@@ -143,7 +143,7 @@ export const skilledWorkers = [
     officeAddress: randomAddress(),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
     jobsCompleted: randomInt(0, 300),
@@ -159,7 +159,7 @@ export const skilledWorkers = [
     officeAddress: randomAddress(),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
     jobsCompleted: randomInt(0, 300),
@@ -175,7 +175,7 @@ export const skilledWorkers = [
     officeAddress: randomAddress(),
     isVerified: randomBoolean(),
     dateJoined: randomCreatedDate(),
-    status: getRandomElementFromArr(status),
+    accountStatus: getRandomElementFromArr(accountStatus),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
     jobsCompleted: randomInt(0, 300),

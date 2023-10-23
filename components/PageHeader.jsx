@@ -4,7 +4,7 @@ import { MdAdd, MdOutlineSearch } from "react-icons/md";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
-const PageHeader = ({ title, searchKeyword, setSearchKeyword, searchInputPlaceholder, buttonTitle, buttonLink }) => {
+const PageHeader = ({ title, searchKeyword, setSearchKeyword, searchInputPlaceholder, buttonTitle, buttonLink, showAddButton = true }) => {
   return (
     <>
       <h1 className="mb-8 text-3xl font-bold">{title}</h1>
@@ -19,11 +19,13 @@ const PageHeader = ({ title, searchKeyword, setSearchKeyword, searchInputPlaceho
           />
           <MdOutlineSearch className="absolute right-4 top-1/2 -translate-y-1/2 text-2xl" />
         </div>
-        <Button asChild>
-          <Link href={buttonLink} className="rounded-3xl">
-            <MdAdd className="mr-2 text-2xl" /> {buttonTitle}
-          </Link>
-        </Button>
+        {showAddButton && (
+          <Button asChild>
+            <Link href={buttonLink} className="rounded-3xl">
+              <MdAdd className="mr-2 text-2xl" /> {buttonTitle}
+            </Link>
+          </Button>
+        )}
       </div>
     </>
   );

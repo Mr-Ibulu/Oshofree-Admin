@@ -43,10 +43,8 @@ export const categoryColumns = [
   },
   {
     field: "deals",
-    type: "number",
     headerName: "Deals",
     width: 120,
-    valueGetter: ({ row }) => randomQuantity(),
   },
   {
     field: "createdOn",
