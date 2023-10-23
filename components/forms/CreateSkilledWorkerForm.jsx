@@ -1,28 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
-import { MdOutlineError } from "react-icons/md";
+import React from "react";
 import * as Form from "@radix-ui/react-form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { format } from "date-fns";
-import { Calendar as CalendarIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { MdOutlineError } from "react-icons/md";
+import { Input } from "../ui/input";
 import MultiSelectInput from "./MultiSelectInput";
+import { Button } from "../ui/button";
 
-const CreateDealForm = ({ type }) => {
-  const [date, setDate] = useState();
-
+const CreateSkilledWorkerForm = () => {
   return (
     <Form.Root className="space-y-7">
       <Form.Field className="mb-2 grid" name="name">
         <div className="flex flex-wrap items-center px-3">
-          <Form.Label className="font-medium leading-8">{type} Name</Form.Label>
+          <Form.Label className="font-medium leading-8">Name</Form.Label>
           <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
-            <MdOutlineError className="text-sm" /> Please enter {type.toLowerCase()} name
+            <MdOutlineError className="text-sm" /> Please enter vendor name
           </Form.Message>
         </div>
         <Form.Control asChild>
@@ -33,11 +25,44 @@ const CreateDealForm = ({ type }) => {
           />
         </Form.Control>
       </Form.Field>
-      <Form.Field className="mb-2 grid" name="prevPrice">
+      <Form.Field className="mb-2 grid" name="phone">
         <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Original Price</Form.Label>
+          <Form.Label className=" font-medium leading-8">Phone Number</Form.Label>
           <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
-            <MdOutlineError className="text-sm" /> Please enter price
+            <MdOutlineError className="text-sm" /> Please enter vendor&apos;s phone
+          </Form.Message>
+        </div>
+        <Form.Control asChild>
+          <Input
+            required
+            type="number"
+            className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+          />
+        </Form.Control>
+      </Form.Field>
+      <Form.Field className="mb-2 grid" name="email">
+        <div className="flex flex-wrap items-center px-3">
+          <Form.Label className=" font-medium leading-8">Email Address</Form.Label>
+          <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
+            <MdOutlineError className="text-sm" /> Please enter vendor&apos;s email
+          </Form.Message>
+          <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="typeMismatch">
+            <MdOutlineError className="text-base" /> Please provide a valid Email Address
+          </Form.Message>
+        </div>
+        <Form.Control asChild>
+          <Input
+            required
+            type="email"
+            className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+          />
+        </Form.Control>
+      </Form.Field>
+      <Form.Field className="mb-2 grid" name="companyName">
+        <div className="flex flex-wrap items-center px-3">
+          <Form.Label className=" font-medium leading-8">Company Name</Form.Label>
+          <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
+            <MdOutlineError className="text-sm" /> Please enter vendor&apos;s company name
           </Form.Message>
         </div>
         <Form.Control asChild>
@@ -48,11 +73,11 @@ const CreateDealForm = ({ type }) => {
           />
         </Form.Control>
       </Form.Field>
-      <Form.Field className="mb-2 grid" name="newPrice">
+      <Form.Field className="mb-2 grid" name="address">
         <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Discounted Price</Form.Label>
+          <Form.Label className=" font-medium leading-8">Company Address</Form.Label>
           <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
-            <MdOutlineError className="text-sm" /> Please enter price
+            <MdOutlineError className="text-sm" /> Please enter vendor&apos;s address
           </Form.Message>
         </div>
         <Form.Control asChild>
@@ -63,61 +88,26 @@ const CreateDealForm = ({ type }) => {
           />
         </Form.Control>
       </Form.Field>
-      <Form.Field className="mb-2 grid" name="vendor">
-        <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Vendor ID</Form.Label>
-          <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
-            <MdOutlineError className="text-sm" /> Please enter vendor Id
-          </Form.Message>
-        </div>
-        <Form.Control asChild>
-          <Input
-            required
-            type="text"
-            className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
-          />
-        </Form.Control>
-      </Form.Field>
-      <Form.Field className="mb-2 grid" name="expiry">
-        <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Deal Expiry Date</Form.Label>
-          <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
-            <MdOutlineError className="text-sm" /> Please enter expiry date
-          </Form.Message>
-        </div>
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button
-              variant={"outline"}
-              className={cn(
-                "h-12 w-full justify-start rounded-3xl bg-zinc-100 text-left text-base font-medium shadow-inner hover:bg-zinc-200 dark:bg-zinc-900 dark:shadow-zinc-950 dark:hover:bg-zinc-950 sm:w-[448px]",
-                !date && "text-muted-foreground",
-              )}
-            >
-              <CalendarIcon className="mr-2 h-4 w-4" />
-              {date ? format(date, "PPP") : <span>Pick a date</span>}
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-auto p-0">
-            <Calendar mode="single" selected={date} onSelect={setDate} initialFocus />
-          </PopoverContent>
-        </Popover>
-      </Form.Field>
-      <MultiSelectInput labelTitle="Attach Categories" />
-      <Form.Field className="mb-2 grid" name="description">
-        <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Deal Info</Form.Label>
-        </div>
-        <Form.Control asChild>
-          <Textarea className="rounded-xl px-6 text-base font-medium shadow-inner focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950" />
-        </Form.Control>
-      </Form.Field>
+      <MultiSelectInput labelTitle="Skills" />
       <Form.Field className="mb-2 grid" name="image">
         <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Image</Form.Label>
+          <Form.Label className=" font-medium leading-8">Photo</Form.Label>
         </div>
         <Form.Control asChild>
           <Input
+            type="file"
+            accept=".png, .jpg, .jpeg"
+            className="shadow-inner file:mr-2 file:rounded file:bg-white  dark:bg-zinc-900 dark:shadow-zinc-950 dark:file:bg-zinc-700"
+          />
+        </Form.Control>
+      </Form.Field>
+      <Form.Field className="mb-2 grid" name="documents">
+        <div className="flex flex-wrap items-center px-3">
+          <Form.Label className=" font-medium leading-8">Upload Documents</Form.Label>
+        </div>
+        <Form.Control asChild>
+          <Input
+            multiple
             type="file"
             accept=".png, .jpg, .jpeg"
             className="shadow-inner file:mr-2 file:rounded file:bg-white  dark:bg-zinc-900 dark:shadow-zinc-950 dark:file:bg-zinc-700"
@@ -130,7 +120,7 @@ const CreateDealForm = ({ type }) => {
         </Form.Submit>
       </div>
     </Form.Root>
-  );
-};
+  )
+}
 
-export default CreateDealForm;
+export default CreateSkilledWorkerForm

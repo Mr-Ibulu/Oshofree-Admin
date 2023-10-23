@@ -1,22 +1,20 @@
 import RowTitle from "@/components/table/RowTitle";
 import TableImage from "@/components/table/TableImage";
 import { Badge } from "@/components/ui/badge";
-import { findCategory } from "@/lib/utils";
 import Link from "next/link";
 import { MdManageAccounts } from "react-icons/md";
 
-export const vendorColumns = [
+export const skilledWorkerColumns = [
   {
     field: "actions",
     headerName: "Manage",
     width: 100,
     renderCell: ({ row }) => (
-      <Link href={`/vendors/${row.id}`} className="rounded-full p-2 hover:bg-zinc-200 dark:hover:bg-zinc-900">
+      <Link href={`/skilled-workers/${row.id}`} className="rounded-full p-2 hover:bg-zinc-200 dark:hover:bg-zinc-900">
         <MdManageAccounts className="text-xl text-zinc-600 dark:text-zinc-400" />
       </Link>
     ),
   },
-
   {
     field: "id",
     headerName: "ID",
@@ -86,21 +84,20 @@ export const vendorColumns = [
         <Badge className="bg-yellow-600 dark:bg-yellow-600 dark:text-white">{value}</Badge>
       ),
   },
-  { field: "dealsAvailable", headerName: "Available Deals", width: 140 },
   {
     field: "follows",
     headerName: "Followers",
     width: 100,
   },
   {
-    field: "ordersFulfilled",
-    headerName: "Fulfilled Orders",
+    field: "jobsCompleted",
+    headerName: "Completed Jobs",
     width: 140,
   },
   {
-    field: "activeCategories",
-    headerName: "Associated Categories",
+    field: "skills",
+    headerName: "Skills",
     width: 200,
-    valueFormatter: ({ value }) => value.map((slug) => findCategory(slug).title),
+    valueFormatter: ({ value }) => value.map((skill) => skill),
   },
 ];

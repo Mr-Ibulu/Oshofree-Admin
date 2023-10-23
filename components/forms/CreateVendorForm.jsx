@@ -4,7 +4,7 @@ import React from "react";
 import * as Form from "@radix-ui/react-form";
 import { MdOutlineError } from "react-icons/md";
 import { Input } from "../ui/input";
-import MultiSelectCategoryInput from "./MultiSelectCategoryInput";
+import MultiSelectInput from "./MultiSelectInput";
 import { Button } from "../ui/button";
 
 const CreateVendorForm = () => {
@@ -88,7 +88,7 @@ const CreateVendorForm = () => {
           />
         </Form.Control>
       </Form.Field>
-      <MultiSelectCategoryInput labelTitle="Attach Categories" />
+      <MultiSelectInput labelTitle="Attach Categories" />
       <Form.Field className="mb-2 grid" name="image">
         <div className="flex flex-wrap items-center px-3">
           <Form.Label className=" font-medium leading-8">Photo</Form.Label>

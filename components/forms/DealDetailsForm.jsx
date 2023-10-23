@@ -13,7 +13,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { cn, findCategory } from "@/lib/utils";
 import { format } from "date-fns";
 import { randomRate } from "@mui/x-data-grid-generator";
-import MultiSelectCategoryInput from "./MultiSelectCategoryInput";
+import MultiSelectInput from "./MultiSelectInput";
 
 const DealDetailsForm = ({ dealDetails }) => {
   const [date, setDate] = useState(dealDetails.expiry);
@@ -120,7 +120,7 @@ const DealDetailsForm = ({ dealDetails }) => {
             </PopoverContent>
           </Popover>
         </Form.Field>
-        <MultiSelectCategoryInput labelTitle="Attached Categories" defaultCategories={selectedCategories} />
+        <MultiSelectInput labelTitle="Attached Categories" defaultSelectedOptions={selectedCategories} />
         <Form.Field className="mb-2" name="description">
           <div className="flex flex-wrap items-center px-3">
             <Form.Label className=" font-medium leading-8">Description</Form.Label>

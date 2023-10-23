@@ -3,29 +3,29 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { MdAdd } from "react-icons/md";
 import { findAllDescendantCategory, findAllRootCategories } from "@/lib/utils";
 
-const MultiSelectCategoryInput = ({ defaultCategories = [], labelTitle = "" }) => {
-  const [selectedCategories, setSelectedCategories] = useState(defaultCategories);
+const MultiSelectInput = ({ defaultSelectedOptions = [], labelTitle = "" }) => {
+  const [selectedOptions, setSelectedOptions] = useState(defaultSelectedOptions);
 
   const attachCategory = (name) => {
-    if (selectedCategories.includes(name)) {
+    if (selectedOptions.includes(name)) {
       return;
     }
-    setSelectedCategories([...selectedCategories, name]);
+    setSelectedOptions([...selectedOptions, name]);
   };
 
   const removeCategory = (event, name) => {
     event.preventDefault();
-    const filteredArr = selectedCategories.filter((el) => el !== name);
-    setSelectedCategories(filteredArr);
+    const filteredArr = selectedOptions.filter((el) => el !== name);
+    setSelectedOptions(filteredArr);
   };
 
   return (
-    <div className="mb-2 grid" name="categories">
+    <div className="mb-2 grid" name="options">
       <div className="flex flex-wrap items-center px-3">
         <p className=" font-medium leading-8">{labelTitle}</p>
       </div>
       <div className="relative min-h-[48px] max-w-md rounded-3xl bg-zinc-100 px-6 py-3 text-base font-medium shadow-inner focus:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950">
-        {selectedCategories.map((cat) => (
+        {selectedOptions.map((cat) => (
           <button
             key={cat}
             className="mx-1 my-1 rounded-md border border-zinc-400 bg-zinc-200 px-2 text-sm dark:border-zinc-700 dark:bg-zinc-800"
@@ -71,4 +71,4 @@ const MultiSelectCategoryInput = ({ defaultCategories = [], labelTitle = "" }) =
   );
 };
 
-export default MultiSelectCategoryInput;
+export default MultiSelectInput;

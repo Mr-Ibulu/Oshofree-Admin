@@ -9,33 +9,32 @@ import MultiSelectInput from "./MultiSelectInput";
 import { Button } from "../ui/button";
 import { findCategory } from "@/lib/utils";
 
-const VendorDetailsForm = ({ vendorDetails }) => {
-  const [selectedCategories, setSelectedCategories] = useState(vendorDetails.activeCategories.map((slug) => findCategory(slug).title));
-
+const SkilledWorkerDetailsForm = ({ skilledWorkerDetails }) => {
+  const [selectedCategories, setSelectedCategories] = useState(skilledWorkerDetails.skills.map((slug) => findCategory(slug).title));
   return (
     <Form.Root>
       <div className="grow space-y-7">
         <div className="flex items-center gap-3 px-3">
           <span>Status:</span>
-          {vendorDetails.status === "Suspended" ? (
+          {skilledWorkerDetails.status === "Suspended" ? (
             "Suspended"
           ) : (
             <Form.Field className="flex items-center gap-4" name="active">
               <div className="flex flex-wrap items-center px-3">
-                <Form.Label className=" font-medium leading-8">{vendorDetails.status}</Form.Label>
+                <Form.Label className=" font-medium leading-8">{skilledWorkerDetails.status}</Form.Label>
               </div>
               <Form.Control asChild>
-                <Switch checked={vendorDetails.status === "Active"} />
+                <Switch checked={skilledWorkerDetails.status === "Active"} />
               </Form.Control>
             </Form.Field>
           )}
         </div>
         <Form.Field className="mb-2 flex items-center gap-4" name="isAvailable">
           <div className="flex flex-wrap items-center px-3">
-            <Form.Label className=" font-medium leading-8">{vendorDetails.isVerified ? "Verified" : "Not Verified"}</Form.Label>
+            <Form.Label className=" font-medium leading-8">{skilledWorkerDetails.isVerified ? "Verified" : "Not Verified"}</Form.Label>
           </div>
           <Form.Control asChild>
-            <Switch checked={vendorDetails.isVerified} />
+            <Switch checked={skilledWorkerDetails.isVerified} />
           </Form.Control>
         </Form.Field>
         <Form.Field className="mb-2" name="name">
@@ -48,7 +47,7 @@ const VendorDetailsForm = ({ vendorDetails }) => {
           <Form.Control asChild>
             <Input
               required
-              value={vendorDetails.name}
+              value={skilledWorkerDetails.name}
               type="text"
               className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
@@ -64,7 +63,7 @@ const VendorDetailsForm = ({ vendorDetails }) => {
           <Form.Control asChild>
             <Input
               required
-              value={vendorDetails.phone}
+              value={skilledWorkerDetails.phone}
               type="text"
               className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
@@ -80,7 +79,7 @@ const VendorDetailsForm = ({ vendorDetails }) => {
           <Form.Control asChild>
             <Input
               required
-              value={vendorDetails.email}
+              value={skilledWorkerDetails.email}
               type="text"
               className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
@@ -96,7 +95,7 @@ const VendorDetailsForm = ({ vendorDetails }) => {
           <Form.Control asChild>
             <Input
               required
-              value={vendorDetails.companyName}
+              value={skilledWorkerDetails.companyName}
               type="text"
               className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
@@ -111,14 +110,14 @@ const VendorDetailsForm = ({ vendorDetails }) => {
           </div>
           <Form.Control asChild>
             <Input
-              value={vendorDetails.officeAddress}
+              value={skilledWorkerDetails.officeAddress}
               required
               type="text"
               className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
-        <MultiSelectInput labelTitle="Associated Categories" defaultSelectedOptions={selectedCategories} />
+        <MultiSelectInput labelTitle="Skills" defaultSelectedOptions={selectedCategories} />
         <div className="flex items-center justify-center">
           <Form.Submit asChild>
             <Button disabled={true} className="w-60">
@@ -131,4 +130,4 @@ const VendorDetailsForm = ({ vendorDetails }) => {
   );
 };
 
-export default VendorDetailsForm;
+export default SkilledWorkerDetailsForm;
