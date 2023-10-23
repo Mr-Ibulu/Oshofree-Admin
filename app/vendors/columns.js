@@ -93,8 +93,8 @@ export const vendorColumns = [
     width: 100,
   },
   {
-    field: "dealsFulfilled",
-    headerName: "Fulfilled Deals",
+    field: "ordersFulfilled",
+    headerName: "Fulfilled Orders",
     width: 140,
   },
   {

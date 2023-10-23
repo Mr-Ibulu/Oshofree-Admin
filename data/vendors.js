@@ -34,7 +34,7 @@ export const vendors = [
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
-    dealsFulfilled: randomInt(0, 300),
+    ordersFulfilled: randomInt(0, 300),
     activeCategories: ["health-and-fitness"],
   },
   {
@@ -50,7 +50,7 @@ export const vendors = [
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
-    dealsFulfilled: randomInt(0, 300),
+    ordersFulfilled: randomInt(0, 300),
     activeCategories: ["local", "food-and-drinks", "vacation"],
   },
   {
@@ -66,7 +66,7 @@ export const vendors = [
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
-    dealsFulfilled: randomInt(0, 300),
+    ordersFulfilled: randomInt(0, 300),
     activeCategories: ["beauty-and-spas", "entertainment", "health-and-fitness"],
   },
   {
@@ -82,7 +82,7 @@ export const vendors = [
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
-    dealsFulfilled: randomInt(0, 300),
+    ordersFulfilled: randomInt(0, 300),
     activeCategories: ["local", "home-services"],
   },
   {
@@ -98,7 +98,7 @@ export const vendors = [
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
-    dealsFulfilled: randomInt(0, 300),
+    ordersFulfilled: randomInt(0, 300),
     activeCategories: ["local", "food-and-drinks", "vacation"],
   },
   {
@@ -114,7 +114,7 @@ export const vendors = [
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
-    dealsFulfilled: randomInt(0, 300),
+    ordersFulfilled: randomInt(0, 300),
     activeCategories: ["local", "mens-fashion"],
   },
   {
@@ -130,7 +130,7 @@ export const vendors = [
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
-    dealsFulfilled: randomInt(0, 300),
+    ordersFulfilled: randomInt(0, 300),
     activeCategories: ["local", "food-and-drinks", "family"],
   },
   {
@@ -146,7 +146,7 @@ export const vendors = [
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
-    dealsFulfilled: randomInt(0, 300),
+    ordersFulfilled: randomInt(0, 300),
     activeCategories: ["local", "food-and-drinks", "family"],
   },
   {
@@ -162,7 +162,7 @@ export const vendors = [
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
-    dealsFulfilled: randomInt(0, 300),
+    ordersFulfilled: randomInt(0, 300),
     activeCategories: ["local", "vacation", "family", "romantic"],
   },
   {
@@ -178,7 +178,7 @@ export const vendors = [
     dateJoined: randomCreatedDate(),
     dealsAvailable: randomInt(0, 5),
     follows: randomInt(0, 1000),
-    dealsFulfilled: randomInt(0, 300),
+    ordersFulfilled: randomInt(0, 300),
     activeCategories: ["local", "things-to-do"],
   },
 ];

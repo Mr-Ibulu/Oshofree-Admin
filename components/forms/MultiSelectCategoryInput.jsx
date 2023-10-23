@@ -3,7 +3,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { MdAdd } from "react-icons/md";
 import { findAllDescendantCategory, findAllRootCategories } from "@/lib/utils";
 
-const MultiSelectCategoryInput = ({ defaultCategories = [] , labelTitle=""}) => {
+const MultiSelectCategoryInput = ({ defaultCategories = [], labelTitle = "" }) => {
   const [selectedCategories, setSelectedCategories] = useState(defaultCategories);
 
   const attachCategory = (name) => {

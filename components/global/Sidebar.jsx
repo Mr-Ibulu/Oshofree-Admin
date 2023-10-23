@@ -81,7 +81,7 @@ const Sidebar = ({ isDialog = false }) => {
       <div className="px-5 py-9 sm:py-12">
         <Image src={theme === "dark" ? brandWhite : brandBlack} alt="logo" priority className="mx-auto w-36" />
       </div>
-      <div className="scrollbar-track-gray-50 scrollbar-thumb-gray-200 scrollbar-track-rounded-full scrollbar-thumb-rounded-full hover:xl:scrollbar-thin scrollbar-none overflow-auto px-5">
+      <div className="overflow-auto px-5 scrollbar-none scrollbar-track-gray-50 scrollbar-thumb-gray-200 scrollbar-track-rounded-full scrollbar-thumb-rounded-full hover:xl:scrollbar-thin">
         <ul>
           {sidebarOptions.map((option) => (
             <li key={option.title} className="my-3">

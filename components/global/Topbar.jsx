@@ -18,7 +18,7 @@ const Topbar = () => {
           </button>
         </SheetTrigger>
         <SheetContent side={"left"} className="w-[80%] rounded-r-[30px] border-none p-0">
-          <div className="scrollbar-none shadow-sidebar h-full overflow-y-scroll rounded-r-[30px] dark:bg-zinc-800 dark:shadow-zinc-950">
+          <div className="h-full overflow-y-scroll rounded-r-[30px] shadow-sidebar scrollbar-none dark:bg-zinc-800 dark:shadow-zinc-950">
             <Sidebar isDialog={true} />
           </div>
         </SheetContent>
