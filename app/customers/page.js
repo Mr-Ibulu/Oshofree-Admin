@@ -18,7 +18,7 @@ const Customers = () => {
         setSearchKeyword={setSearchKeyword}
         showAddButton={false}
       />
-      <DataTable columns={customerColumns} rows={customers} searchKeyword={searchKeyword} defaultSearchColumnField={"name"} />
+      <DataTable columns={customerColumns} rows={customers} searchKeyword={searchKeyword} defaultSearchColumnField={"name"} defaultSort="name"/>
     </>
   );
 };

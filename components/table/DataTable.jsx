@@ -5,7 +5,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import TableToolbar from "@/components/table/Toolbar";
 import { useTheme } from "next-themes";
 
-const DataTable = ({ columns, rows, searchKeyword, defaultSearchColumnField }) => {
+const DataTable = ({ columns, rows, searchKeyword, defaultSearchColumnField, defaultSort = "" }) => {
   const { resolvedTheme } = useTheme();
   const [useToolbarFilter, setUseToolbarFilter] = useState(true);
 
@@ -23,7 +23,7 @@ const DataTable = ({ columns, rows, searchKeyword, defaultSearchColumnField }) =
         columns={columns}
         rows={rows}
         rowHeight={70}
-        initialState={{ sorting: { sortModel: [{ field: "title", sort: "asc" }] }, pagination: { paginationModel: { pageSize: 20 } } }}
+        initialState={{ sorting: { sortModel: [{ field: defaultSort, sort: "asc" }] }, pagination: { paginationModel: { pageSize: 20 } } }}
         {...(!useToolbarFilter && { filterModel: { items: [{ field: defaultSearchColumnField, operator: "contains", value: searchKeyword }] } })}
         slots={{ toolbar: TableToolbar }}
         pageSizeOptions={[10, 20, 30]}

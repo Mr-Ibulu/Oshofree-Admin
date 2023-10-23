@@ -18,7 +18,7 @@ const Vendors = () => {
         buttonTitle={"Add New Vendor"}
         buttonLink={"/vendors/create"}
       />
-      <DataTable columns={vendorColumns} rows={vendors} searchKeyword={searchKeyword} defaultSearchColumnField={"name"} />
+      <DataTable columns={vendorColumns} rows={vendors} searchKeyword={searchKeyword} defaultSearchColumnField={"name"} defaultSort="name"/>
     </>
   );
 };

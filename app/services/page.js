@@ -18,7 +18,7 @@ const Services = () => {
         buttonTitle={"Add New Service Deal"}
         buttonLink={"/services/create"}
       />
-      <DataTable columns={serviceColumns} rows={services} searchKeyword={searchKeyword} defaultSearchColumnField={"id"} />
+      <DataTable columns={serviceColumns} rows={services} searchKeyword={searchKeyword} defaultSearchColumnField={"id"} defaultSort="id"/>
     </>
   );
 };
