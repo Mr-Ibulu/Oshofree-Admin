@@ -21,7 +21,7 @@ const CreateSkilledWorkerForm = () => {
           <Input
             required
             type="text"
-            className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
           />
         </Form.Control>
       </Form.Field>
@@ -36,7 +36,7 @@ const CreateSkilledWorkerForm = () => {
           <Input
             required
             type="number"
-            className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
           />
         </Form.Control>
       </Form.Field>
@@ -54,7 +54,7 @@ const CreateSkilledWorkerForm = () => {
           <Input
             required
             type="email"
-            className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
           />
         </Form.Control>
       </Form.Field>
@@ -69,7 +69,7 @@ const CreateSkilledWorkerForm = () => {
           <Input
             required
             type="text"
-            className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
           />
         </Form.Control>
       </Form.Field>
@@ -84,13 +84,13 @@ const CreateSkilledWorkerForm = () => {
           <Input
             required
             type="text"
-            className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
           />
         </Form.Control>
       </Form.Field>
       <MultiSelectInput labelTitle="Skills" />
       <Form.Field className="mb-2 grid" name="image">
-        <div className="flex flex-wrap items-center px-3">
+        <div className="px-3">
           <Form.Label className=" font-medium leading-8">Photo</Form.Label>
         </div>
         <Form.Control asChild>
@@ -102,7 +102,7 @@ const CreateSkilledWorkerForm = () => {
         </Form.Control>
       </Form.Field>
       <Form.Field className="mb-2 grid" name="documents">
-        <div className="flex flex-wrap items-center px-3">
+        <div className="px-3">
           <Form.Label className=" font-medium leading-8">Upload Documents</Form.Label>
         </div>
         <Form.Control asChild>

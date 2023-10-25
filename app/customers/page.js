@@ -16,9 +16,8 @@ const Customers = () => {
         searchInputPlaceholder={"Search by customer name"}
         searchKeyword={searchKeyword}
         setSearchKeyword={setSearchKeyword}
-        showAddButton={false}
       />
-      <DataTable columns={customerColumns} rows={customers} searchKeyword={searchKeyword} defaultSearchColumnField={"name"} defaultSort="name"/>
+      <DataTable columns={customerColumns} rows={customers} searchKeyword={searchKeyword} defaultSearchColumnField={"name"} defaultSort="name" />
     </>
   );
 };

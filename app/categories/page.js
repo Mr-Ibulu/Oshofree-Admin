@@ -19,7 +19,7 @@ const Categories = () => {
         buttonTitle={"Add New Category"}
         buttonLink={"/categories/create"}
       />
-      <DataTable columns={categoryColumns} rows={categories} searchKeyword={searchKeyword} defaultSearchColumnField={"title"} defaultSort="title"/>
+      <DataTable columns={categoryColumns} rows={categories} searchKeyword={searchKeyword} defaultSearchColumnField={"title"} defaultSort="title" />
     </>
   );
 };

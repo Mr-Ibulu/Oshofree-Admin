@@ -5,7 +5,7 @@ import { Input } from "./ui/input";
 
 const DetailsImageContainer = ({ imageSrc, alt }) => {
   return (
-    <div className="w-full sm:w-[500px] xl:w-[300px]">
+    <div className="mx-auto w-full sm:w-[300px]">
       <div className="relative aspect-square w-full overflow-hidden rounded-xl">
         {imageSrc ? (
           <Image

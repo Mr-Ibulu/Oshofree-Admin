@@ -21,7 +21,7 @@ export const CreateCategoryForm = () => {
           <Input
             required
             type="text"
-            className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
           />
         </Form.Control>
         <p className="mt-1 px-3 text-xs font-medium dark:text-zinc-400">The name is how it appears on Oshofree.com</p>
@@ -37,7 +37,7 @@ export const CreateCategoryForm = () => {
           <Input
             required
             type="text"
-            className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
           />
         </Form.Control>
         <p className="mt-1 px-3 text-xs font-medium dark:text-zinc-400">
@@ -49,7 +49,7 @@ export const CreateCategoryForm = () => {
           <p className=" font-medium leading-8">Parent Category</p>
         </div>
         <Select>
-          <SelectTrigger className="h-12 max-w-md rounded-3xl px-6 text-base font-medium shadow-inner focus:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950">
+          <SelectTrigger className="h-12 max-w-md rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner focus:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950">
             <SelectValue placeholder="None" />
           </SelectTrigger>
           <SelectContent className="max-h-80">

@@ -23,14 +23,12 @@ const CustomerDetails = ({ params }) => {
   return (
     <div className="mx-auto max-w-5xl">
       <DetailsHead headerTitle={customerDetails.name} />
-      <div className="mx-auto flex flex-col flex-wrap gap-8 rounded-xl bg-white px-5 py-5 shadow-md dark:bg-zinc-800 sm:flex-row">
-        <div className="w-full">
-          <div className="flex items-center gap-3">
-            <span>Suspend Account</span>
-            <Switch />
-          </div>
+      <div className="mx-auto space-y-8 rounded-xl bg-white px-5 py-5 shadow-md dark:bg-zinc-800">
+        <div className="flex items-center gap-3">
+          <span>Suspend Account</span>
+          <Switch />
         </div>
-        <div className="grow">
+        <div>
           <div className="mb-5 flex items-center space-x-3 px-3">
             <span>
               <MdOutlineNumbers className="text-lg" />

@@ -42,7 +42,7 @@ const DealDetailsForm = ({ dealDetails }) => {
               required
               value={dealDetails.title}
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
           <p className="mt-1 px-3 text-xs font-medium dark:text-zinc-400">The name is how it appears on Oshofree.com</p>
@@ -59,7 +59,7 @@ const DealDetailsForm = ({ dealDetails }) => {
               value={dealDetails.prevPrice}
               required
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -75,7 +75,7 @@ const DealDetailsForm = ({ dealDetails }) => {
               value={dealDetails.prevPrice - randomRate() * dealDetails.prevPrice}
               required
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -91,7 +91,7 @@ const DealDetailsForm = ({ dealDetails }) => {
               value={dealDetails.vendorId}
               required
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -107,7 +107,7 @@ const DealDetailsForm = ({ dealDetails }) => {
               <Button
                 variant={"outline"}
                 className={cn(
-                  "h-12 w-full justify-start rounded-3xl bg-zinc-100 text-left text-base font-medium shadow-inner hover:bg-zinc-200 dark:bg-zinc-900 dark:shadow-zinc-950 dark:hover:bg-zinc-950 sm:w-[448px]",
+                  "h-12 w-full justify-start rounded-3xl border-none bg-slate-100 text-left text-base font-medium shadow-inner hover:bg-zinc-200 dark:bg-zinc-900 dark:shadow-zinc-950 dark:hover:bg-zinc-950 sm:w-[448px]",
                   !date && "text-muted-foreground",
                 )}
               >

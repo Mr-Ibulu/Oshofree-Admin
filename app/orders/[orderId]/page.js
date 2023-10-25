@@ -17,7 +17,7 @@ const OrderDetails = ({ params }) => {
   return (
     <div className="mx-auto max-w-5xl">
       <DetailsHead headerTitle={`Order: #${orderDetails.orderId}`} />
-      <div className="mx-auto space-y-7 rounded-xl bg-white px-5 py-5 shadow-md dark:bg-zinc-800 sm:flex-row">
+      <div className="mx-auto space-y-7 rounded-xl bg-white px-5 py-5 shadow-md dark:bg-zinc-800">
         <div className="flex flex-col justify-between gap-4 sm:flex-row">
           <div className="space-x-3">
             <span className="text-sm">Placed On:</span> <span className="font-semibold">{orderDetails.date.toLocaleDateString()}</span>

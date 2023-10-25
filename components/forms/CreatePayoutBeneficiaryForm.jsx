@@ -13,16 +13,16 @@ import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import MultiSelectInput from "./MultiSelectInput";
 
-const CreateDealForm = ({ type }) => {
+const CreatePayoutBeneficiaryForm = () => {
   const [date, setDate] = useState();
 
   return (
     <Form.Root className="space-y-7">
-      <Form.Field className="mb-2 grid" name="name">
+      <Form.Field className="mb-2 grid" name="id">
         <div className="flex flex-wrap items-center px-3">
-          <Form.Label className="font-medium leading-8">{type} Name</Form.Label>
+          <Form.Label className="font-medium leading-8">Reference ID</Form.Label>
           <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
-            <MdOutlineError className="text-sm" /> Please enter {type.toLowerCase()} name
+            <MdOutlineError className="text-sm" /> Please enter Reference ID
           </Form.Message>
         </div>
         <Form.Control asChild>
@@ -33,11 +33,29 @@ const CreateDealForm = ({ type }) => {
           />
         </Form.Control>
       </Form.Field>
-      <Form.Field className="mb-2 grid" name="prevPrice">
+      <Form.Field className="mb-2 grid" name="amount">
         <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Original Price</Form.Label>
+          <Form.Label className=" font-medium leading-8">Amount To Pay</Form.Label>
           <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
-            <MdOutlineError className="text-sm" /> Please enter price
+            <MdOutlineError className="text-sm" /> Please enter amount
+          </Form.Message>
+        </div>
+        <div className="relative">
+          <Form.Control asChild>
+            <Input
+              required
+              type="number"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-10 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            />
+          </Form.Control>
+          <span className="absolute left-5 top-1/2 -translate-y-1/2">&#8358;</span>
+        </div>
+      </Form.Field>
+      <Form.Field className="mb-2 grid" name="recipient">
+        <div className="flex flex-wrap items-center px-3">
+          <Form.Label className=" font-medium leading-8">Recipient Name</Form.Label>
+          <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
+            <MdOutlineError className="text-sm" /> Please enter recipient name
           </Form.Message>
         </div>
         <Form.Control asChild>
@@ -48,11 +66,11 @@ const CreateDealForm = ({ type }) => {
           />
         </Form.Control>
       </Form.Field>
-      <Form.Field className="mb-2 grid" name="newPrice">
+      <Form.Field className="mb-2 grid" name="email">
         <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Discounted Price</Form.Label>
+          <Form.Label className=" font-medium leading-8">Email</Form.Label>
           <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
-            <MdOutlineError className="text-sm" /> Please enter price
+            <MdOutlineError className="text-sm" /> Please enter recipient email address
           </Form.Message>
         </div>
         <Form.Control asChild>
@@ -63,11 +81,11 @@ const CreateDealForm = ({ type }) => {
           />
         </Form.Control>
       </Form.Field>
-      <Form.Field className="mb-2 grid" name="vendor">
+      <Form.Field className="mb-2 grid" name="phone">
         <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Vendor ID</Form.Label>
+          <Form.Label className=" font-medium leading-8">Phone</Form.Label>
           <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
-            <MdOutlineError className="text-sm" /> Please enter vendor Id
+            <MdOutlineError className="text-sm" /> Please enter recipient phone number
           </Form.Message>
         </div>
         <Form.Control asChild>
@@ -78,11 +96,41 @@ const CreateDealForm = ({ type }) => {
           />
         </Form.Control>
       </Form.Field>
-      <Form.Field className="mb-2 grid" name="expiry">
+      <Form.Field className="mb-2 grid" name="accountNo">
         <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Deal Expiry Date</Form.Label>
+          <Form.Label className=" font-medium leading-8">Account Number</Form.Label>
           <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
-            <MdOutlineError className="text-sm" /> Please enter expiry date
+            <MdOutlineError className="text-sm" /> Please enter recipient account number
+          </Form.Message>
+        </div>
+        <Form.Control asChild>
+          <Input
+            required
+            type="number"
+            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+          />
+        </Form.Control>
+      </Form.Field>
+      <Form.Field className="mb-2 grid" name="bank">
+        <div className="flex flex-wrap items-center px-3">
+          <Form.Label className=" font-medium leading-8">Bank</Form.Label>
+          <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
+            <MdOutlineError className="text-sm" /> Please enter recipient bank
+          </Form.Message>
+        </div>
+        <Form.Control asChild>
+          <Input
+            required
+            type="text"
+            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+          />
+        </Form.Control>
+      </Form.Field>
+      <Form.Field className="mb-2 grid" name="dateDue">
+        <div className="flex flex-wrap items-center px-3">
+          <Form.Label className=" font-medium leading-8">Due Date</Form.Label>
+          <Form.Message className="ml-auto flex items-center gap-1 text-xs font-medium text-red-500" match="valueMissing">
+            <MdOutlineError className="text-sm" /> Please enter Due Date
           </Form.Message>
         </div>
         <Popover>
@@ -103,34 +151,14 @@ const CreateDealForm = ({ type }) => {
           </PopoverContent>
         </Popover>
       </Form.Field>
-      <MultiSelectInput labelTitle="Attach Categories" />
-      <Form.Field className="mb-2 grid" name="description">
-        <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Deal Info</Form.Label>
-        </div>
-        <Form.Control asChild>
-          <Textarea className="rounded-xl px-6 text-base font-medium shadow-inner focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950" />
-        </Form.Control>
-      </Form.Field>
-      <Form.Field className="mb-2 grid" name="image">
-        <div className="flex flex-wrap items-center px-3">
-          <Form.Label className=" font-medium leading-8">Image</Form.Label>
-        </div>
-        <Form.Control asChild>
-          <Input
-            type="file"
-            accept=".png, .jpg, .jpeg"
-            className="shadow-inner file:mr-2 file:rounded file:bg-white  dark:bg-zinc-900 dark:shadow-zinc-950 dark:file:bg-zinc-700"
-          />
-        </Form.Control>
-      </Form.Field>
+
       <div className="flex items-center justify-center">
         <Form.Submit asChild>
-          <Button className="w-60">Create</Button>
+          <Button className="w-60">Add</Button>
         </Form.Submit>
       </div>
     </Form.Root>
   );
 };
 
-export default CreateDealForm;
+export default CreatePayoutBeneficiaryForm;

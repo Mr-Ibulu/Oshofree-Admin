@@ -49,7 +49,7 @@ const SkilledWorkerDetailsForm = ({ skilledWorkerDetails }) => {
               required
               value={skilledWorkerDetails.name}
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -65,7 +65,7 @@ const SkilledWorkerDetailsForm = ({ skilledWorkerDetails }) => {
               required
               value={skilledWorkerDetails.phone}
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -81,7 +81,7 @@ const SkilledWorkerDetailsForm = ({ skilledWorkerDetails }) => {
               required
               value={skilledWorkerDetails.email}
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -97,7 +97,7 @@ const SkilledWorkerDetailsForm = ({ skilledWorkerDetails }) => {
               required
               value={skilledWorkerDetails.companyName}
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -113,7 +113,7 @@ const SkilledWorkerDetailsForm = ({ skilledWorkerDetails }) => {
               value={skilledWorkerDetails.officeAddress}
               required
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>

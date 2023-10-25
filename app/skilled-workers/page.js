@@ -18,7 +18,13 @@ const SkilledWorkers = () => {
         buttonTitle={"Add New Skilled Worker"}
         buttonLink={"/skilled-workers/create"}
       />
-      <DataTable columns={skilledWorkerColumns} rows={skilledWorkers} searchKeyword={searchKeyword} defaultSearchColumnField={"name"} defaultSort="name"/>
+      <DataTable
+        columns={skilledWorkerColumns}
+        rows={skilledWorkers}
+        searchKeyword={searchKeyword}
+        defaultSearchColumnField={"name"}
+        defaultSort="name"
+      />
     </>
   );
 };

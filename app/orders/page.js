@@ -23,7 +23,6 @@ const Orders = ({ searchParams }) => {
         searchInputPlaceholder={`Search by ${urlSearchParamKey ?? "order ID"} `}
         searchKeyword={searchKeyword}
         setSearchKeyword={setSearchKeyword}
-        showAddButton={false}
       />
       <DataTable
         columns={orderColumns}

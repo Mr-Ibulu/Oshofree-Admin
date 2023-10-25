@@ -75,7 +75,7 @@ export const orderColumns = [
     width: 200,
     renderCell: ({ row }) =>
       row.status === "pending" ? (
-        <Badge className="space-x-2 bg-sky-600 dark:bg-sky-600 dark:text-white">
+        <Badge className="space-x-2 bg-yellow-600 dark:bg-yellow-600 dark:text-white">
           <span>{row.statusInfo}</span>
           <span className="block h-5 w-5 animate-spin rounded-full border-4 border-gray-300 border-t-white"></span>
         </Badge>

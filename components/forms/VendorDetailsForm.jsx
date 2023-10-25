@@ -50,7 +50,7 @@ const VendorDetailsForm = ({ vendorDetails }) => {
               required
               value={vendorDetails.name}
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -66,7 +66,7 @@ const VendorDetailsForm = ({ vendorDetails }) => {
               required
               value={vendorDetails.phone}
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -82,7 +82,7 @@ const VendorDetailsForm = ({ vendorDetails }) => {
               required
               value={vendorDetails.email}
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -98,7 +98,7 @@ const VendorDetailsForm = ({ vendorDetails }) => {
               required
               value={vendorDetails.companyName}
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
@@ -114,7 +114,7 @@ const VendorDetailsForm = ({ vendorDetails }) => {
               value={vendorDetails.officeAddress}
               required
               type="text"
-              className="h-12 rounded-3xl px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
             />
           </Form.Control>
         </Form.Field>
