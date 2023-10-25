@@ -1,9 +1,8 @@
 import TableImage from "@/components/table/TableImage";
 import RowTitle from "@/components/table/RowTitle";
 import { findParent } from "@/lib/utils";
-import { randomQuantity } from "@mui/x-data-grid-generator";
 import { Badge } from "@/components/ui/badge";
-import { MdManageAccounts, MdModeEditOutline, MdOutlineModeEditOutline } from "react-icons/md";
+import { MdManageAccounts } from "react-icons/md";
 import Link from "next/link";
 
 export const categoryColumns = [

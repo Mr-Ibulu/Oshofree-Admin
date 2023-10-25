@@ -6,6 +6,11 @@ import hotel from "@/public/images/hotel.png";
 import resort from "@/public/images/resort.jpg";
 import gym from "@/public/images/gym.jpg";
 import amusement from "@/public/images/amusement.jpg";
+import { vendors } from "./vendors";
+
+const getRandomVendor = () => {
+  return vendors[Math.floor(Math.random() * vendors.length)];
+};
 
 export const services = [
   {
@@ -13,7 +18,7 @@ export const services = [
     image: spar,
     title: "50-Minute Custom Lymphatic Drainage Session with Ultrasonic Fat Cavitation",
     prevPrice: randomPrice(),
-    vendorId: randomInt(0, 400),
+    vendorId: getRandomVendor().id,
     available: randomBoolean(),
     createdOn: randomCreatedDate(),
     updatedOn: randomUpdatedDate(),
@@ -29,7 +34,7 @@ export const services = [
     image: haircut,
     title: "One or Two Men's Haircuts with Hot Facial Shave for One at Pivot Point Academy",
     prevPrice: randomPrice(),
-    vendorId: randomInt(0, 400),
+    vendorId: getRandomVendor().id,
     available: randomBoolean(),
     createdOn: randomCreatedDate(),
     updatedOn: randomUpdatedDate(),
@@ -45,7 +50,7 @@ export const services = [
     image: cleaning,
     title: "Up to 80% Off on Upholstery Cleaning at Master HVAC Cleaning",
     prevPrice: randomPrice(),
-    vendorId: randomInt(0, 400),
+    vendorId: getRandomVendor().id,
     available: randomBoolean(),
     createdOn: randomCreatedDate(),
     updatedOn: randomUpdatedDate(),
@@ -61,7 +66,7 @@ export const services = [
     image: resort,
     title: "Gran Ventana Beach Resort - Puerto Plata, Dominican Republic",
     prevPrice: randomPrice(),
-    vendorId: randomInt(0, 400),
+    vendorId: getRandomVendor().id,
     available: randomBoolean(),
     createdOn: randomCreatedDate(),
     updatedOn: randomUpdatedDate(),
@@ -75,9 +80,9 @@ export const services = [
   {
     id: randomInt(0, 400),
     image: gym,
-    title: "Single Day Ticket to Worlds of Fun",
+    title: "Four Fitness Classes at Shred415",
     prevPrice: randomPrice(),
-    vendorId: randomInt(0, 400),
+    vendorId: getRandomVendor().id,
     available: randomBoolean(),
     createdOn: randomCreatedDate(),
     updatedOn: randomUpdatedDate(),
@@ -93,7 +98,7 @@ export const services = [
     image: amusement,
     title: "Single Day Ticket to Worlds of Fun",
     prevPrice: randomPrice(),
-    vendorId: randomInt(0, 400),
+    vendorId: getRandomVendor().id,
     available: randomBoolean(),
     createdOn: randomCreatedDate(),
     updatedOn: randomUpdatedDate(),
@@ -109,7 +114,7 @@ export const services = [
     image: hotel,
     title: "Queen Kapi olani Hotel Waikīkī Beach",
     prevPrice: randomPrice(),
-    vendorId: randomInt(0, 400),
+    vendorId: getRandomVendor().id,
     available: randomBoolean(),
     createdOn: randomCreatedDate(),
     updatedOn: randomUpdatedDate(),

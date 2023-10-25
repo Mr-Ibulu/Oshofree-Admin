@@ -40,6 +40,7 @@ export const serviceColumns = [
     type: "number",
     headerName: "Original Price",
     width: 160,
+    valueFormatter: ({ value }) => `\u20A6 ${value.toFixed(2)}`,
   },
   {
     field: "newPrice",
@@ -47,6 +48,7 @@ export const serviceColumns = [
     headerName: "Discounted Price",
     width: 160,
     valueGetter: ({ row }) => row.prevPrice - randomRate() * row.prevPrice,
+    valueFormatter: ({ value }) => `\u20A6 ${value.toFixed(2)}`,
   },
   {
     field: "discount",

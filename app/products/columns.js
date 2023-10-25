@@ -3,7 +3,7 @@ import RowTitle from "@/components/table/RowTitle";
 import { findCategory } from "@/lib/utils";
 import { randomRate } from "@mui/x-data-grid-generator";
 import { Badge } from "@/components/ui/badge";
-import { MdManageAccounts, MdModeEditOutline, MdOutlineModeEditOutline } from "react-icons/md";
+import { MdManageAccounts } from "react-icons/md";
 import Link from "next/link";
 
 export const productColumns = [
@@ -40,6 +40,7 @@ export const productColumns = [
     type: "number",
     headerName: "Original Price",
     width: 160,
+    valueFormatter: ({ value }) => `\u20A6 ${value.toFixed(2)}`,
   },
   {
     field: "newPrice",
@@ -47,6 +48,7 @@ export const productColumns = [
     headerName: "Discounted Price",
     width: 160,
     valueGetter: ({ row }) => row.prevPrice - randomRate() * row.prevPrice,
+    valueFormatter: ({ value }) => `\u20A6 ${value.toFixed(2)}`,
   },
   {
     field: "discount",
