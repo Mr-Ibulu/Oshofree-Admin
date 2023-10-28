@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import CreateDealForm from "@/components/forms/CreateDealForm";
 import DetailsHead from "@/components/DetailsHead";

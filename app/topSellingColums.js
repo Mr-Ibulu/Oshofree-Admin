@@ -1,3 +1,5 @@
+"use client";
+
 import RowTitle from "@/components/table/RowTitle";
 import TableImage from "@/components/table/TableImage";
 import { Badge } from "@/components/ui/badge";

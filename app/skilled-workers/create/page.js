@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import DetailsHead from "@/components/DetailsHead";
 import CreateSkilledWorkerForm from "@/components/forms/CreateSkilledWorkerForm";

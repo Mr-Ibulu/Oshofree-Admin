@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import CreateVendorForm from "@/components/forms/CreateVendorForm";
 import DetailsHead from "@/components/DetailsHead";

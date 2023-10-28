@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import RevenueLineChart from "@/components/charts/RevenueLineChart";
 import { LiaMoneyBillWaveSolid } from "react-icons/lia";

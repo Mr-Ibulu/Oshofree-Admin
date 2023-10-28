@@ -1,7 +1,6 @@
-"use client";
+import React from "react";
 import DetailsHead from "@/components/DetailsHead";
 import CreatePayoutBeneficiaryForm from "@/components/forms/CreatePayoutBeneficiaryForm";
-import React from "react";
 
 const CreateBeneficiary = () => {
   return (

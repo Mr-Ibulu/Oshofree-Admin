@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import VendorDetailsForm from "@/components/forms/VendorDetailsForm";
 import { findVendor } from "@/lib/utils";
