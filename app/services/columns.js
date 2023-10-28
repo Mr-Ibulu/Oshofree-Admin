@@ -1,7 +1,6 @@
 import TableImage from "@/components/table/TableImage";
 import RowTitle from "@/components/table/RowTitle";
 import { findCategory } from "@/lib/utils";
-import { randomRate } from "@mui/x-data-grid-generator";
 import { Badge } from "@/components/ui/badge";
 import { MdManageAccounts, MdModeEditOutline, MdOutlineModeEditOutline } from "react-icons/md";
 import Link from "next/link";
@@ -48,15 +47,14 @@ export const serviceColumns = [
     type: "number",
     headerName: "Discounted Price",
     width: 160,
-    valueGetter: ({ row }) => row.prevPrice - randomRate() * row.prevPrice,
     valueFormatter: ({ value }) => `\u20A6 ${value.toFixed(2)}`,
   },
   {
     field: "discount",
     headerName: "Discount",
     width: 120,
-    valueGetter: () => randomRate() * 100,
-    valueFormatter: ({ value }) => `${value.toLocaleString()}%`,
+    valueGetter: ({ row }) => ((row.newPrice - row.prevPrice) / row.prevPrice) * 100,
+    valueFormatter: ({ value }) => `${Math.round(value).toLocaleString()}%`,
   },
   {
     field: "available",

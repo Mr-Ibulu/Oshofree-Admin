@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import CategoryDetailsForm from "@/components/forms/CategoryDetailsForm";
 import DetailsImageContainer from "@/components/DetailsImageContainer";

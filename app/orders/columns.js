@@ -61,7 +61,8 @@ export const orderColumns = [
     field: "discount",
     headerName: "Discount",
     width: 120,
-    valueFormatter: ({ value }) => `${value.toLocaleString()}%`,
+    valueGetter: ({ row }) => ((row.deal.newPrice - row.deal.prevPrice) / row.deal.prevPrice) * 100,
+    valueFormatter: ({ value }) => `${Math.round(value).toLocaleString()}%`,
   },
   {
     field: "totalPrice",

@@ -12,7 +12,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar";
 import { cn, findCategory } from "@/lib/utils";
 import { format } from "date-fns";
-import { randomRate } from "@mui/x-data-grid-generator";
 import MultiSelectInput from "./MultiSelectInput";
 
 const DealDetailsForm = ({ dealDetails }) => {
@@ -72,7 +71,7 @@ const DealDetailsForm = ({ dealDetails }) => {
           </div>
           <Form.Control asChild>
             <Input
-              value={dealDetails.prevPrice - randomRate() * dealDetails.prevPrice}
+              value={dealDetails.newPrice}
               required
               type="text"
               className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"

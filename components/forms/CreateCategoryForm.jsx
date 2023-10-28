@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import * as Form from "@radix-ui/react-form";
 import { MdOutlineError } from "react-icons/md";

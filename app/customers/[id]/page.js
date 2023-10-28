@@ -1,11 +1,9 @@
-"use client";
-
+import React from "react";
 import DetailsHead from "@/components/DetailsHead";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { findCustomer } from "@/lib/utils";
 import Link from "next/link";
-import React from "react";
 import {
   MdHouse,
   MdOutlineAccountBox,

@@ -1,7 +1,6 @@
 import RowTitle from "@/components/table/RowTitle";
 import TableImage from "@/components/table/TableImage";
 import { Badge } from "@/components/ui/badge";
-import { randomRate } from "@mui/x-data-grid-generator";
 import Link from "next/link";
 import numeral from "numeral";
 
@@ -35,7 +34,6 @@ export const topSellingColumns = [
     field: "newPrice",
     headerName: "Discounted Price",
     minWidth: 160,
-    valueGetter: ({ row }) => row.prevPrice - randomRate() * row.prevPrice,
     valueFormatter: ({ value }) => `\u20A6 ${value.toFixed(2)}`,
   },
   {

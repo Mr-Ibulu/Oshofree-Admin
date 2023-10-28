@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import * as Form from "@radix-ui/react-form";
 import { Switch } from "../ui/switch";
