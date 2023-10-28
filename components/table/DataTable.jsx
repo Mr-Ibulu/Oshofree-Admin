@@ -27,30 +27,30 @@ const DataTable = ({
   }, [searchKeyword]);
 
   return (
-      <DataGrid
-        columns={columns}
-        rows={rows}
-        rowHeight={70}
-        initialState={{
-          sorting: { sortModel: [{ field: defaultSortedColumn, sort: sortOrder }] },
-          pagination: { paginationModel: { pageSize: 20 } },
-        }}
-        {...(!useToolbarFilter && { filterModel: { items: [{ field: defaultSearchColumnField, operator: "contains", value: searchKeyword }] } })}
-        {...(showToolbar && { slots: { toolbar: TableToolbar } })}
-        pageSizeOptions={[10, 20, 30]}
-        // getRowHeight={() => "auto"}
-        sx={{
-          borderWidth: "0px",
-          fontFamily: "inherit",
-          color: "inherit",
-          "& .MuiDataGrid-cell": { justifyContent: justifyRowContent ? "center" : "" },
-          "& .MuiDataGrid-withBorderColor": { borderColor: resolvedTheme === "dark" ? "#3f3f46" : "" },
-          "& .MuiDataGrid-columnSeparator": { visibility: "visible", color: resolvedTheme === "dark" ? "#ef4444" : "" },
-          "& .MuiButtonBase-root": { color: "inherit" },
-          "& .MuiTablePagination-root": { color: "inherit" },
-          "& .MuiDataGrid-toolbarContainer": { gap: "20px" },
-        }}
-      />
+    <DataGrid
+      columns={columns}
+      rows={rows}
+      rowHeight={70}
+      initialState={{
+        sorting: { sortModel: [{ field: defaultSortedColumn, sort: sortOrder }] },
+        pagination: { paginationModel: { pageSize: 20 } },
+      }}
+      {...(!useToolbarFilter && { filterModel: { items: [{ field: defaultSearchColumnField, operator: "contains", value: searchKeyword }] } })}
+      {...(showToolbar && { slots: { toolbar: TableToolbar } })}
+      pageSizeOptions={[10, 20, 30]}
+      // getRowHeight={() => "auto"}
+      sx={{
+        borderWidth: "0px",
+        fontFamily: "inherit",
+        color: "inherit",
+        "& .MuiDataGrid-cell": { justifyContent: justifyRowContent ? "center" : "" },
+        "& .MuiDataGrid-withBorderColor": { borderColor: resolvedTheme === "dark" ? "#3f3f46" : "" },
+        "& .MuiDataGrid-columnSeparator": { visibility: "visible", color: resolvedTheme === "dark" ? "#ef4444" : "" },
+        "& .MuiButtonBase-root": { color: "inherit" },
+        "& .MuiTablePagination-root": { color: "inherit" },
+        "& .MuiDataGrid-toolbarContainer": { gap: "20px" },
+      }}
+    />
   );
 };
 
