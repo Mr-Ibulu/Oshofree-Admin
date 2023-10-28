@@ -18,7 +18,15 @@ const Services = () => {
         buttonTitle={"Add New Service Deal"}
         buttonLink={"/services/create"}
       />
-      <DataTable columns={serviceColumns} rows={services} searchKeyword={searchKeyword} defaultSearchColumnField={"id"} defaultSort="id" />
+      <div className="h-[50rem] rounded-xl bg-white p-2 shadow-md dark:bg-zinc-800">
+        <DataTable
+          columns={serviceColumns}
+          rows={services}
+          searchKeyword={searchKeyword}
+          defaultSearchColumnField={"id"}
+          defaultSortedColumn="updatedOn"
+        />
+      </div>
     </>
   );
 };

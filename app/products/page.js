@@ -19,7 +19,15 @@ const Products = () => {
         buttonTitle={"Add New Product Deal"}
         buttonLink={"/products/create"}
       />
-      <DataTable columns={productColumns} rows={products} searchKeyword={searchKeyword} defaultSearchColumnField={"id"} defaultSort="id" />
+      <div className="h-[50rem] rounded-xl bg-white p-2 shadow-md dark:bg-zinc-800">
+        <DataTable
+          columns={productColumns}
+          rows={products}
+          searchKeyword={searchKeyword}
+          defaultSearchColumnField={"id"}
+          defaultSortedColumn="updatedOn"
+        />
+      </div>
     </>
   );
 };

@@ -12,7 +12,7 @@ const DetailsImageContainer = ({ imageSrc, alt }) => {
             src={imageSrc}
             alt={`${alt} image`}
             fill
-            sizes={"(max-width: 768px) 30vw, (max-width: 1200px) 70vw, 100vw"}
+            sizes={"(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw"}
             className="object-cover"
           />
         ) : (

@@ -28,6 +28,7 @@ export const services = [
     isNew: true,
     categories: ["beauty-and-spas", "entertainment", "health-and-fitness"],
     // newPrice: 1000,
+    completedSales: randomInt(100, 2000),
   },
   {
     id: randomInt(0, 400),
@@ -44,6 +45,7 @@ export const services = [
     isNew: true,
     categories: ["local", "health-and-fitness", "things-to-do"],
     // newPrice: 1000,
+    completedSales: randomInt(100, 2000),
   },
   {
     id: randomInt(0, 400),
@@ -60,6 +62,7 @@ export const services = [
     isNew: true,
     categories: ["local", "home-services"],
     // newPrice: 1000,
+    completedSales: randomInt(100, 2000),
   },
   {
     id: randomInt(0, 400),
@@ -76,6 +79,7 @@ export const services = [
     isNew: true,
     categories: ["local", "food-and-drinks", "vacation"],
     // newPrice: 1000,
+    completedSales: randomInt(100, 2000),
   },
   {
     id: randomInt(0, 400),
@@ -92,6 +96,7 @@ export const services = [
     isNew: true,
     categories: ["local", "health-and-fitness", "things-to-do"],
     // newPrice: 1000,
+    completedSales: randomInt(100, 2000),
   },
   {
     id: randomInt(0, 400),
@@ -108,6 +113,7 @@ export const services = [
     isNew: true,
     categories: ["local", "things-to-do"],
     // newPrice: 1000,
+    completedSales: randomInt(100, 2000),
   },
   {
     id: randomInt(0, 400),
@@ -124,5 +130,6 @@ export const services = [
     isNew: true,
     categories: ["local", "vacation", "family", "romantic"],
     // newPrice: 1000,
+    completedSales: randomInt(100, 2000),
   },
 ];

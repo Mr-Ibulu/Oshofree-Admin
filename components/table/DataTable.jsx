@@ -5,7 +5,16 @@ import { DataGrid } from "@mui/x-data-grid";
 import TableToolbar from "@/components/table/Toolbar";
 import { useTheme } from "next-themes";
 
-const DataTable = ({ columns, rows, searchKeyword, defaultSearchColumnField, defaultSort = "" }) => {
+const DataTable = ({
+  columns,
+  rows,
+  searchKeyword = "",
+  defaultSearchColumnField = "",
+  defaultSortedColumn = "",
+  sortOrder = "desc",
+  showToolbar = true,
+  justifyRowContent = false,
+}) => {
   const { resolvedTheme } = useTheme();
   const [useToolbarFilter, setUseToolbarFilter] = useState(true);
 
@@ -18,28 +27,30 @@ const DataTable = ({ columns, rows, searchKeyword, defaultSearchColumnField, def
   }, [searchKeyword]);
 
   return (
-    <div className="h-[50rem] rounded-xl bg-white p-2 shadow-md dark:bg-zinc-800">
       <DataGrid
         columns={columns}
         rows={rows}
         rowHeight={70}
-        initialState={{ sorting: { sortModel: [{ field: defaultSort, sort: "asc" }] }, pagination: { paginationModel: { pageSize: 20 } } }}
+        initialState={{
+          sorting: { sortModel: [{ field: defaultSortedColumn, sort: sortOrder }] },
+          pagination: { paginationModel: { pageSize: 20 } },
+        }}
         {...(!useToolbarFilter && { filterModel: { items: [{ field: defaultSearchColumnField, operator: "contains", value: searchKeyword }] } })}
-        slots={{ toolbar: TableToolbar }}
+        {...(showToolbar && { slots: { toolbar: TableToolbar } })}
         pageSizeOptions={[10, 20, 30]}
         // getRowHeight={() => "auto"}
         sx={{
           borderWidth: "0px",
           fontFamily: "inherit",
           color: "inherit",
-          "& .MuiDataGrid-withBorderColor": { borderColor: resolvedTheme === "dark" ? "#71717a" : "" },
+          "& .MuiDataGrid-cell": { justifyContent: justifyRowContent ? "center" : "" },
+          "& .MuiDataGrid-withBorderColor": { borderColor: resolvedTheme === "dark" ? "#3f3f46" : "" },
           "& .MuiDataGrid-columnSeparator": { visibility: "visible", color: resolvedTheme === "dark" ? "#ef4444" : "" },
           "& .MuiButtonBase-root": { color: "inherit" },
           "& .MuiTablePagination-root": { color: "inherit" },
           "& .MuiDataGrid-toolbarContainer": { gap: "20px" },
         }}
       />
-    </div>
   );
 };
 

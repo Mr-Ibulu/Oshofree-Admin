@@ -5,6 +5,7 @@ import { randomRate } from "@mui/x-data-grid-generator";
 import { Badge } from "@/components/ui/badge";
 import { MdManageAccounts } from "react-icons/md";
 import Link from "next/link";
+import numeral from "numeral";
 
 export const productColumns = [
   {
@@ -91,6 +92,12 @@ export const productColumns = [
     type: "date",
     headerName: "Expiry",
     minWidth: 120,
+  },
+  {
+    field: "completedSales",
+    headerName: "Total Sales",
+    width: 160,
+    valueFormatter: ({ value }) => numeral(value).format("0.0a"),
   },
   {
     field: "rating",

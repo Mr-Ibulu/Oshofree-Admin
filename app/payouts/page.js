@@ -18,7 +18,15 @@ const Payouts = () => {
         buttonLink={"/payouts/create"}
         buttonTitle={"Add New Beneficiary"}
       />
-      <DataTable columns={payoutColumns} rows={payouts} searchKeyword={searchKeyword} defaultSearchColumnField={"name"} defaultSort="name" />
+      <div className="h-[50rem] rounded-xl bg-white p-2 shadow-md dark:bg-zinc-800">
+        <DataTable
+          columns={payoutColumns}
+          rows={payouts}
+          searchKeyword={searchKeyword}
+          defaultSearchColumnField={"name"}
+          defaultSortedColumn="status"
+        />
+      </div>
     </>
   );
 };

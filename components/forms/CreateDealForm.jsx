@@ -40,13 +40,16 @@ const CreateDealForm = ({ type }) => {
             <MdOutlineError className="text-sm" /> Please enter price
           </Form.Message>
         </div>
-        <Form.Control asChild>
-          <Input
-            required
-            type="text"
-            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
-          />
-        </Form.Control>
+        <div className="relative">
+          <Form.Control asChild>
+            <Input
+              required
+              type="number"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-10 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            />
+          </Form.Control>
+          <span className="absolute left-5 top-1/2 -translate-y-1/2">&#8358;</span>
+        </div>
       </Form.Field>
       <Form.Field className="mb-2 grid" name="newPrice">
         <div className="flex flex-wrap items-center px-3">
@@ -55,13 +58,16 @@ const CreateDealForm = ({ type }) => {
             <MdOutlineError className="text-sm" /> Please enter price
           </Form.Message>
         </div>
-        <Form.Control asChild>
-          <Input
-            required
-            type="text"
-            className="h-12 rounded-3xl border-none bg-slate-100 px-6 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
-          />
-        </Form.Control>
+        <div className="relative">
+          <Form.Control asChild>
+            <Input
+              required
+              type="number"
+              className="h-12 rounded-3xl border-none bg-slate-100 px-10 text-base font-medium shadow-inner data-[invalid]:border-red-500 focus-visible:ring-transparent dark:bg-zinc-900 dark:shadow-zinc-950"
+            />
+          </Form.Control>
+          <span className="absolute left-5 top-1/2 -translate-y-1/2">&#8358;</span>
+        </div>
       </Form.Field>
       <Form.Field className="mb-2 grid" name="vendor">
         <div className="flex flex-wrap items-center px-3">

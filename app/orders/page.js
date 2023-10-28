@@ -24,13 +24,15 @@ const Orders = ({ searchParams }) => {
         searchKeyword={searchKeyword}
         setSearchKeyword={setSearchKeyword}
       />
-      <DataTable
-        columns={orderColumns}
-        rows={orders}
-        searchKeyword={searchKeyword}
-        defaultSearchColumnField={urlSearchParamKey ?? "orderId"}
-        defaultSort="date"
-      />
+      <div className="h-[50rem] rounded-xl bg-white p-2 shadow-md dark:bg-zinc-800">
+        <DataTable
+          columns={orderColumns}
+          rows={orders}
+          searchKeyword={searchKeyword}
+          defaultSearchColumnField={urlSearchParamKey ?? "orderId"}
+          defaultSortedColumn="date"
+        />
+      </div>
     </>
   );
 };

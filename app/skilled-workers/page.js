@@ -18,13 +18,15 @@ const SkilledWorkers = () => {
         buttonTitle={"Add New Skilled Worker"}
         buttonLink={"/skilled-workers/create"}
       />
-      <DataTable
-        columns={skilledWorkerColumns}
-        rows={skilledWorkers}
-        searchKeyword={searchKeyword}
-        defaultSearchColumnField={"name"}
-        defaultSort="name"
-      />
+      <div className="h-[50rem] rounded-xl bg-white p-2 shadow-md dark:bg-zinc-800">
+        <DataTable
+          columns={skilledWorkerColumns}
+          rows={skilledWorkers}
+          searchKeyword={searchKeyword}
+          defaultSearchColumnField={"name"}
+          defaultSortedColumn="dateJoined"
+        />
+      </div>
     </>
   );
 };

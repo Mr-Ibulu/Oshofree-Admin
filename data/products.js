@@ -25,6 +25,7 @@ export const products = [
     type: "product",
     isNew: true,
     categories: ["electronics", "entertainment", "phones-and-tablet"],
+    completedSales: randomInt(100, 2000),
     // newPrice: 1000,
   },
   {
@@ -41,6 +42,7 @@ export const products = [
     type: "product",
     isNew: true,
     categories: ["local", "mens-fashion"],
+    completedSales: randomInt(100, 2000),
     // newPrice: 1000,
   },
   {
@@ -57,6 +59,7 @@ export const products = [
     type: "product",
     isNew: true,
     categories: ["local", "womens-fashion"],
+    completedSales: randomInt(100, 2000),
     // newPrice: 1000,
   },
   {
@@ -73,6 +76,7 @@ export const products = [
     type: "product",
     isNew: true,
     categories: ["local", "food-and-drinks", "family"],
+    completedSales: randomInt(100, 2000),
     // newPrice: 1000,
   },
   {
@@ -89,6 +93,7 @@ export const products = [
     type: "product",
     isNew: true,
     categories: ["local", "food-and-drinks", "family"],
+    completedSales: randomInt(100, 2000),
     // newPrice: 1000,
   },
 ];
