@@ -6,7 +6,7 @@ import DetailsImageContainer from "@/components/DetailsImageContainer";
 import { products } from "@/data/products";
 
 export function generateStaticParams() {
-  return products.map((product) => ({ id: product.id }));
+  return products.map((product) => ({ id: `${product.id}` }));
 }
 
 const ViewProductDeal = ({ params }) => {

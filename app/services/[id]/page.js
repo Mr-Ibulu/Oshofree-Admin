@@ -6,7 +6,7 @@ import DetailsImageContainer from "@/components/DetailsImageContainer";
 import { services } from "@/data/services";
 
 export function generateStaticParams() {
-  return services.map((service) => ({ id: service.id }));
+  return services.map((service) => ({ id: `${service.id}` }));
 }
 
 const ViewServiceDeal = ({ params }) => {

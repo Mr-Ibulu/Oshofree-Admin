@@ -17,7 +17,7 @@ import {
 import { customers } from "@/data/customers";
 
 export function generateStaticParams() {
-  return customers.map((customer) => ({ id: customer.id }));
+  return customers.map((customer) => ({ id: `${customer.id}` }));
 }
 
 const CustomerDetails = ({ params }) => {

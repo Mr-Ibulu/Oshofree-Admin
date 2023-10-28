@@ -7,7 +7,7 @@ import SkilledWorkerDetailsForm from "@/components/forms/SkilledWorkerDetailsFor
 import { skilledWorkers } from "@/data/skilledWorkers";
 
 export function generateStaticParams() {
-  return skilledWorkers.map((worker) => ({ id: worker.id }));
+  return skilledWorkers.map((worker) => ({ id: `${worker.id}` }));
 }
 
 const SkilledWorkerDetails = ({ params }) => {

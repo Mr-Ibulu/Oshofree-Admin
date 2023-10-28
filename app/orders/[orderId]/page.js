@@ -9,7 +9,7 @@ import Image from "next/image";
 import { orders } from "@/data/orders";
 
 export function generateStaticParams() {
-  return orders.map((order) => ({ orderId: order.orderId }));
+  return orders.map((order) => ({ orderId: `${order.orderId}` }));
 }
 
 const OrderDetails = ({ params }) => {
@@ -137,7 +137,7 @@ const OrderDetails = ({ params }) => {
             </div>
             <div className="flex items-center gap-3">
               <span className="text-sm font-semibold">Discount:</span>
-              <span>{orderDetails.discount.toFixed(2)}%</span>
+              <span>{((productDetails.newPrice - productDetails.prevPrice) / productDetails.prevPrice).toFixed(2) * 100}%</span>
             </div>
             <div className="flex items-center gap-3">
               <span className="text-sm font-semibold">Price:</span>

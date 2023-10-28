@@ -1,5 +1,4 @@
 import React from "react";
-import * as Form from "@radix-ui/react-form";
 import DetailsHead from "@/components/DetailsHead";
 import PayoutStatusSelect from "@/components/PayoutStatusSelect";
 import { findPayoutDatail } from "@/lib/utils";
@@ -12,11 +11,11 @@ import {
   MdOutlinePayments,
   MdOutlinePersonPin,
 } from "react-icons/md";
-import { Input } from "@/components/ui/input";
 import { payouts } from "@/data/payouts";
+import UploadReceiptForm from "@/components/forms/UploadReceiptForm";
 
 export function generateStaticParams() {
-  return payouts.map((payout) => ({ id: payout.id }));
+  return payouts.map((payout) => ({ id: `${payout.id}` }));
 }
 
 const PayoutDetails = ({ params }) => {
@@ -77,21 +76,7 @@ const PayoutDetails = ({ params }) => {
             <span>Bank:</span> <span>{payoutDetail.bank}</span>
           </div>
           <div className="mt-10 flex items-center justify-center rounded-xl border p-3 dark:border-zinc-600">
-            <Form.Root className="space-y-7">
-              <Form.Field className="mb-2 grid" name="documents">
-                <div className="mb-2 px-3">
-                  <Form.Label className=" font-medium leading-8">Upload Payment Receipts</Form.Label>
-                </div>
-                <Form.Control asChild>
-                  <Input
-                    multiple
-                    type="file"
-                    accept=".png, .jpg, .jpeg, .pdf, .docx"
-                    className="shadow-inner file:mr-2 file:rounded file:bg-white  dark:bg-zinc-900 dark:shadow-zinc-950 dark:file:bg-zinc-700"
-                  />
-                </Form.Control>
-              </Form.Field>
-            </Form.Root>
+            <UploadReceiptForm />
           </div>
         </div>
       </div>
