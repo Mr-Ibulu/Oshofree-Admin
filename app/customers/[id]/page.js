@@ -14,6 +14,11 @@ import {
   MdOutlineNumbers,
   MdOutlinePersonOutline,
 } from "react-icons/md";
+import { customers } from "@/data/customers";
+
+export function generateStaticParams() {
+  return customers.map((customer) => ({ id: customer.id }));
+}
 
 const CustomerDetails = ({ params }) => {
   const customerDetails = findCustomer(params.id);

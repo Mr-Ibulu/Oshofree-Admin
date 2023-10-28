@@ -4,6 +4,11 @@ import { findVendor } from "@/lib/utils";
 import DetailsHead from "@/components/DetailsHead";
 import DetailsImageContainer from "@/components/DetailsImageContainer";
 import { Switch } from "@/components/ui/switch";
+import { vendors } from "@/data/vendors";
+
+export function generateStaticParams() {
+  return vendors.map((vendor) => ({ id: vendor.id }));
+}
 
 const VendorDetails = ({ params }) => {
   const vendorDetails = findVendor(params.id);

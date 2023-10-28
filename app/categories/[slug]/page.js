@@ -3,6 +3,11 @@ import CategoryDetailsForm from "@/components/forms/CategoryDetailsForm";
 import DetailsImageContainer from "@/components/DetailsImageContainer";
 import DetailsHead from "@/components/DetailsHead";
 import { findCategory } from "@/lib/utils";
+import { categories } from "@/data/categories";
+
+export function generateStaticParams() {
+  return categories.map((category) => ({ slug: category.slug }));
+}
 
 const ViewCategory = ({ params }) => {
   const categoryDetails = findCategory(params.slug);

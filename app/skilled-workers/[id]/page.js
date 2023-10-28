@@ -4,6 +4,11 @@ import DetailsHead from "@/components/DetailsHead";
 import { Switch } from "@/components/ui/switch";
 import DetailsImageContainer from "@/components/DetailsImageContainer";
 import SkilledWorkerDetailsForm from "@/components/forms/SkilledWorkerDetailsForm";
+import { skilledWorkers } from "@/data/skilledWorkers";
+
+export function generateStaticParams() {
+  return skilledWorkers.map((worker) => ({ id: worker.id }));
+}
 
 const SkilledWorkerDetails = ({ params }) => {
   const skilledWorkerDetails = findSkilledWorker(params.id);

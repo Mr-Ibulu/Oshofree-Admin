@@ -6,6 +6,11 @@ import { MdOutlineLocalPhone, MdOutlineMailOutline, MdOutlinePersonOutline, MdOu
 import OrderStatusSelect from "@/components/OrderStatusSelect";
 import Link from "next/link";
 import Image from "next/image";
+import { orders } from "@/data/orders";
+
+export function generateStaticParams() {
+  return orders.map((order) => ({ orderId: order.orderId }));
+}
 
 const OrderDetails = ({ params }) => {
   const orderDetails = findOrder(params.orderId);

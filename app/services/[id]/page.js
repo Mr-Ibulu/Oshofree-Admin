@@ -3,6 +3,11 @@ import DealDetailsForm from "@/components/forms/DealDetailsForm";
 import { findService } from "@/lib/utils";
 import DetailsHead from "@/components/DetailsHead";
 import DetailsImageContainer from "@/components/DetailsImageContainer";
+import { services } from "@/data/services";
+
+export function generateStaticParams() {
+  return services.map((service) => ({ id: service.id }));
+}
 
 const ViewServiceDeal = ({ params }) => {
   const dealDetails = findService(params.id);

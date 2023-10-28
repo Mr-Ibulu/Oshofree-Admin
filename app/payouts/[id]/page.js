@@ -13,6 +13,11 @@ import {
   MdOutlinePersonPin,
 } from "react-icons/md";
 import { Input } from "@/components/ui/input";
+import { payouts } from "@/data/payouts";
+
+export function generateStaticParams() {
+  return payouts.map((payout) => ({ id: payout.id }));
+}
 
 const PayoutDetails = ({ params }) => {
   const payoutDetail = findPayoutDatail(params.id);
