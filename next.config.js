@@ -1,5 +1,3 @@
-// @ts-check
-import withPlaiceholder from "@plaiceholder/next";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
@@ -15,5 +13,4 @@ const nextConfig = {
   basePath: "/Oshofree-Admin",
 };
 
-// module.exports = nextConfig
-export default withPlaiceholder(nextConfig);
+module.exports = nextConfig
