@@ -5,16 +5,18 @@ import DataTable from "@/components/table/DataTable";
 import React, { useEffect, useState } from "react";
 import { orderColumns } from "./columns";
 import { orders } from "@/data/orders";
+import { useSearchParams } from "next/navigation";
 
-const Orders = ({ searchParams }) => {
+const Orders = () => {
+  const searchParam = useSearchParams();
   const [searchKeyword, setSearchKeyword] = useState("");
-  const urlSearchParamKey = Object.keys(searchParams)[0];
+  const urlSearchParamKey = searchParam.get("customerId") && "customerId";
 
   useEffect(() => {
-    if (searchParams[urlSearchParamKey]) {
-      setSearchKeyword(searchParams[urlSearchParamKey]);
+    if (urlSearchParamKey) {
+      setSearchKeyword(searchParam.get(urlSearchParamKey));
     }
-  }, [searchParams, urlSearchParamKey]);
+  }, [searchParam, urlSearchParamKey]);
 
   return (
     <>
