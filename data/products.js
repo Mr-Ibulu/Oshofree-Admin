@@ -7,7 +7,7 @@ import { vendors } from "./vendors";
 
 export const products = [
   {
-    id: 32545,
+    id: 34646,
     image: electronics,
     title: "Costway 6.5QT Air Fryer Oilless Cooker w/ 8 Preset Functions&Smart Touch Screen Black ES10020US-BK",
     prevPrice: 2355,
