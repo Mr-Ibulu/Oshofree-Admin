@@ -55,6 +55,9 @@ export const CreateCategoryForm = () => {
             <SelectValue placeholder="None" />
           </SelectTrigger>
           <SelectContent className="max-h-80">
+            <SelectItem value="root" className="font-semibold">
+              None
+            </SelectItem>
             {findAllRootCategories().map((cat) => (
               <React.Fragment key={cat.slug}>
                 <SelectItem value={cat.slug} className="font-semibold">

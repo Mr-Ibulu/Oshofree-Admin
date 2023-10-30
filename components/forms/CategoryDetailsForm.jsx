@@ -69,6 +69,9 @@ const CategoryDetailsForm = ({ categoryDetails }) => {
               <SelectValue placeholder="None" aria-label={parent?.slug} />
             </SelectTrigger>
             <SelectContent className="max-h-80">
+              <SelectItem value="root" className="font-semibold">
+                None
+              </SelectItem>
               {findAllRootCategories().map((cat) => (
                 <React.Fragment key={cat.slug}>
                   <SelectItem value={cat.slug} className="font-semibold">
